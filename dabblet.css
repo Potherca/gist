@@ -1,0 +1,28 @@
+/**
+ * Floating Block on a Light Blue Small Tile Background 
+ */
+body {
+	background: #CDE;
+	background: linear-gradient(45deg, #FFF, #AAF);
+	background-size: 0.75em 0.75em;
+}
+
+.grid {
+	border-radius: 1em;
+	background: #FFF;
+	box-shadow: 0em 8.2em 2em -4em #000;	
+	border: .5em solid #000;
+	border-bottom: 0.2empx;
+
+
+
+}
+
+div {
+	margin: -25% -25%;
+	top: 50%;
+	left: 50%;
+	height: 50%;
+	min-width: 50%;
+	position: absolute;
+}
