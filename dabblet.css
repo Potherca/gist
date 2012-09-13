@@ -8,6 +8,24 @@
     
     body {        
         font-family: 'Droid Sans', sans-serif;
+        background-color: #EFEFEF;
     }
     
-    h1 {font-size: 1em;}
+    h1 {
+    	font-size: 1em;
+    	color: #666;
+   }
+    
+    body > div {
+    	width: 50%;
+        background-color: #FAFAFA;
+    	margin: 1em auto;
+    	border: 1px solid;
+    	padding: 1em;
+    	border-radius: 1em;
+    }
+    
+    a {
+    	color: #e93;
+    }
+    
