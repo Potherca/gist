@@ -3,3 +3,11 @@
  *
  * http://stackoverflow.com/questions/1261955/inherited-text-decoration-style/4377895#4377895
  */
+ 
+     @import url(http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono);
+    
+    body {        
+        font-family: 'Droid Sans', sans-serif;
+    }
+    
+    h1 {font-size: 1em;}
