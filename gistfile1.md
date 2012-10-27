@@ -10,6 +10,6 @@ create a branch on github without having access to a local git repo.
     
     POST BODY :
     {
-      "ref": "refs/heads/test",
+      "ref": "refs/heads/new-branch-name",
       "sha": "<SHA-TO-BRANCH-FROM>"
     }
