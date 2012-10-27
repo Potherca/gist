@@ -1,4 +1,3 @@
-
 On http://hurl.it/ using  HTTP basic AUTH and the inputs below you can 
 create a branch on github without having access to a local git repo.
 
