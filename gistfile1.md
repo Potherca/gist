@@ -2,7 +2,7 @@ On http://hurl.it/ using  HTTP basic AUTH and the inputs below you can
 create a branch on github without having access to a local git repo.
 
 (With "`<SHA-TO-BRANCH-FROM>`" being one of the latest commit in the repo,
- as shown by https://api.github.com/repos/`<AUTHOR>`/`<REPO>`/git/refs/heads).
+ as shown by `https://api.github.com/repos/<AUTHOR>/<REPO>/git/refs/heads`).
 
 ===
 
