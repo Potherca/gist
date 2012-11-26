@@ -1,0 +1,6 @@
+/**
+ * Note: The variable naming scheme used in this project is an adaption of 
+ * Systems Hungarian. More details available here:
+ * http://potherca.github.com/VariableNamingConvention/
+ * This style guide was originally created by Ben Peachey and Sander Krause.
+ */
