@@ -10,7 +10,7 @@ Just follow these steps:
 4. Do a POST request from Hurl to `https://api.github.com/repos/<AUTHOR>/<REPO>/git/refs` with the following as the POST body :
     
         {
-          "ref": "refs/heads/\NEW-BRANCH-NAME>",
+          "ref": "refs/heads/<NEW-BRANCH-NAME>",
           "sha": "<HASH-TO-BRANCH-FROM>"
         }
     
