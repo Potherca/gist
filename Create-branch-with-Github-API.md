@@ -10,8 +10,8 @@ Just follow these steps:
 4. Do a POST request from Hurl to https://api.github.com/repos/<AUTHOR>/<REPO>/git/refs with the following as the POST body :
     
         {
-          "ref": "refs/heads/\<NEW-BRANCH-NAME\>",
-          "sha": "\<HASH-TO-BRANCH-FROM\>"
+          "ref": "refs/heads/\NEW-BRANCH-NAME>",
+          "sha": "<HASH-TO-BRANCH-FROM>"
         }
     
    (obviously replacing the <NEW-BRANCH-NAME> with the name your want the new branch to have and the <HASH-TO-BRANCH-FROM> with, you know, the hash of the revision you want to branch from)
@@ -25,6 +25,11 @@ Just follow these steps:
 The situation I ran into, was that I found a web app that had a demo but the demo wasn't hosted anywhere. So all I needed to do was clone the repo, create a branches called `gh-pages` (which automatically creates a site hosted by github) and I could watch the demo online without any local repo.
 
 I've also used this to submit (simple) fixes to repos that require a pull-request from a branch that is not master.
+
+Do you have any other use cases or maybe any other service than Hurl that could be used?
+
+Let me know in the comments!
+
 
 [1]: http://developer.github.com/v3/
 [2]: http://hurl.it/
