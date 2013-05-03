@@ -5,16 +5,16 @@ With the aid of [the Github API][1] and [hurl.it][2] this is a piece of cake!
 Just follow these steps:
 
 1. Open [http://hurl.it/][2]
-2. Find the revision you want to branch from. Either on Github itself or by doing a GET request from Hurl: https://api.github.com/repos/<AUTHOR>/<REPO>/git/refs/heads
+2. Find the revision you want to branch from. Either on Github itself or by doing a GET request from Hurl: `https://api.github.com/repos/<AUTHOR>/<REPO>/git/refs/heads`
 3. Copy the revision hash
-4. Do a POST request from Hurl to https://api.github.com/repos/<AUTHOR>/<REPO>/git/refs with the following as the POST body :
+4. Do a POST request from Hurl to `https://api.github.com/repos/<AUTHOR>/<REPO>/git/refs` with the following as the POST body :
     
         {
           "ref": "refs/heads/\NEW-BRANCH-NAME>",
           "sha": "<HASH-TO-BRANCH-FROM>"
         }
     
-   (obviously replacing the <NEW-BRANCH-NAME> with the name your want the new branch to have and the <HASH-TO-BRANCH-FROM> with, you know, the hash of the revision you want to branch from)
+   (obviously replacing the `<NEW-BRANCH-NAME>` with the name your want the new branch to have and the `<HASH-TO-BRANCH-FROM>` with, you know, the hash of the revision you want to branch from)
 
    You will need to use HTTP basic and fill in your Github credentials to access the Github API.
 
