@@ -1,5 +1,7 @@
 /**
  * Nested pseudo elements
+ * 
+ * According to [the spec](http://www.w3.org/TR/css3-content/#nesting) pseudo should be allowed to be nested.
  */
 
 * {padding:1em;}
