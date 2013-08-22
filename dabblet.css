@@ -1,0 +1,20 @@
+/**
+ * Nested pseudo elements
+ */
+
+* {padding:1em;}
+
+div { 
+	content: 'A';
+	outline: 1px solid orange;
+}
+
+div::before { 
+	content: 'B'; 
+	outline: 1px solid red;
+}
+
+div::before::before { 
+	content: 'C'; 
+	outline: 1px solid lime;
+}
