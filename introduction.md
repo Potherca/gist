@@ -14,31 +14,43 @@ My plan of attack is as follows:
 5. ...
 6. Profit!
 
- Step 1
-------------
+
+ Step 1 - Compose as list 
+----------------------------------------------
+
 The best place to go to find out which coding style clashes we as a community have seemed to me to be the FIG site. Based on the PSR-1 and PSR-2 I came up with the list below.
 
- Step 2
-------------
+
+ Step 2 - Add examples
+----------------------------------------------
 
 This will have to wait for the weekend, I'm afraid. 
 
- Step 3
-------------
+
+ Step 3 - Feedback
+----------------------------------------------
+
+The first people that come to mind, other than my co-hooligans are @skoop, @jaytaph, @mvriel, @rdohms, @dr4goonis and maybe @philsturgeon
 
 
- Step 4
-------------
+ Step 4 - Final Edits
+----------------------------------------------
+
+Once the dust has settled, the conclusions will be summarized here (so I don't forget which changes to make).
 
 
- Step 5
-------------
+ Step 5 - ...
+----------------------------------------------
+
+Ellipsis!
 
 
- Step 6
-------------
+ Step 6 - Profit!
+----------------------------------------------
+
+Or just have some more fun, maybe?
 
 
 [1]: https://github.com/outsideris/popularconvention/issues/25
-[2]: https://github.com/outsideris/popularconvention/issues/25#issuecomment-25000248
+[2]: https://twitter.com/potherca/status/382968162506903553
 [3]: http://sideeffect.kr/popularconvention/
