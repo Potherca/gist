@@ -1,9 +1,9 @@
  Popular Coding Convention in PHP on Github
-==================================
+==============================================
 
-For everyone's entertainment I though it might be nice to get PHP added to the http://sideeffect.kr/popularconvention/ site.
+For everyone's entertainment I though it might be nice to get PHP added to the [Popular Coding Convention on Github][3] site.
 
-A request had already been made so I decided to pick up the gauntlet (details at https://github.com/outsideris/popularconvention/issues/25).
+A request [had already been made][1] so I decided to [pick up the gauntlet][2].
 
 My plan of attack is as follows:
 
@@ -11,7 +11,7 @@ My plan of attack is as follows:
 2. Add code examples explaining the different possible variations
 3. Solicit feedback from a few more renowned (or opinionated) community members with the aid of semaphores, tin-can-phone or smoke signals. Or twitter if my wife still won't let me play with matches.
 4. Edit the text to reflect various contributions
-5 ...
+5. ...
 6. Profit!
 
  Step 1
@@ -22,3 +22,23 @@ The best place to go to find out which coding style clashes we as a community ha
 ------------
 
 This will have to wait for the weekend, I'm afraid. 
+
+ Step 3
+------------
+
+
+ Step 4
+------------
+
+
+ Step 5
+------------
+
+
+ Step 6
+------------
+
+
+[1]: https://github.com/outsideris/popularconvention/issues/25
+[2]: https://github.com/outsideris/popularconvention/issues/25#issuecomment-25000248
+[3]: http://sideeffect.kr/popularconvention/
