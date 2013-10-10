@@ -3,26 +3,28 @@
 <head>
     <meta charset='utf-8' />
     <title>Is JSON a config language?</title>
-    <link rel="stylesheet" href="http://potherca.github.io/CssBase/css/base.css" />
 </head>
 <body>
     <h1>Is JSON a config language?</h1>
-
+    <code>
+        (Javascripter = <span id="Javascripter">"Javascripter goes here"</span>) 
+        === "JSON is <span id="Config-Language"></span> config language"
+    </code>
     <script>
+    
         var Javascripter = {
-              "DataConversions" : false
-            , "Models" : false
+            "Write" : {
+                  "DataConversions" : false
+                , "Models" : false
+            }
         };
 
         function canBeBothered(Javascripter){
             return Javascripter.DataConversions && Javascripter.Models;
         }
 
-        document.getElementsByTagName('h1')[0].innerHTML = 
-              'JSON is ' 
-            + (canBeBothered(Javascripter)?'':'NOT') 
-            + ' a config language';
-        ;
+        document.getElementById('Javascripter').innerHTML = JSON.stringify(Javascripter);
+        document.getElementById('Config-Language').innerHTML = (canBeBothered(Javascripter)?' a ':' NOT a ') ;
     </script>
 </body>
 </html>
