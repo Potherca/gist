@@ -1,0 +1,64 @@
+@charset "UTF-8"
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono);
+
+/** 
+ * CSS Only Warning Sign
+ * 
+ * A lot of website use an icon of a warning sign to display next to important 
+ * text. 
+ *
+ * Making use of the "warning sign" character in the Unicode "Miscellaneous 
+ * Symbols" block (the 2600–26FF range) and CSS Only triangles (or "slants" as 
+ * we used to call it at the turn of the century) the same effect can be 
+ * achieved with just CSS.
+ *
+ * This is just a simple example using the minimum amount of CSS, it can easily 
+ * be expanded to make the sign look more garish. Uhm, I mean pretty.
+ * 
+ * Further info about the Unicode symbol available at :
+ *      http://www.fileformat.info/info/unicode/char/26a0/index.htm
+ *
+ * Further info about CSS Slants available at :
+ *      http://www.infimum.dk/HTML/slantinfo.html
+ * 
+ * @TODO: Calculate *exact* triangle dimensions:
+ *      (border-left-width + border-right-width) * 0.866% = border-bottom-width
+ */
+.⚠ {
+    position: relative; /* So we can position the content as absolute */
+
+    /* Using the borders to create a triangle  */
+    border-left: 0.70em solid transparent;
+    border-right: 0.70em solid transparent;
+    border-bottom: 1.35em solid yellow;
+
+    top: -1em;          /* Correction because of the CSS Triangle trick*/
+}
+    .⚠::before {
+        
+        content: "⚠";
+        
+        /* Position the character over the triangle */
+        top: 0.45em;
+        left: -0.45em;
+        position: absolute;
+
+        color: black;
+        font-size: 2em;
+        line-height: 1em;
+    }
+
+
+/* Additional style to tart up the page */
+body {
+    background: rgb(205,205,0);
+    background: linear-gradient(90deg, rgb(125,125,0), rgb(205,205,0));
+    min-height: 100%;
+    text-align: center;
+}
+
+span {
+	font-size: 1000%;
+}
+
+/*EOF*/
