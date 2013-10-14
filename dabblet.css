@@ -4,25 +4,14 @@
 /** 
  * CSS Only Warning Sign
  * 
- * A lot of website use an icon of a warning sign to display next to important 
- * text. 
+ * In an attempt to create this effect utilizing the Unicode "Warning Sign" character
+ * I quickly ran into trouble trying to get things cross-browser compatible. Something
+ * else that bothered me was the fact that there was no way to change the look of the
+ * sign, as that was implemented in the used font. In this attempt, the exclamation mark
+ * is an actual exclamation mark and the sign effect is created by positioning two 
+ * CSS-border-triangles over eachother, a smaller one over a lerger one.
  *
- * Making use of the "warning sign" character in the Unicode "Miscellaneous 
- * Symbols" block (the 2600–26FF range) and CSS Only triangles (or "slants" as 
- * we used to call it at the turn of the century) the same effect can be 
- * achieved with just CSS.
- *
- * This is just a simple example using the minimum amount of CSS, it can easily 
- * be expanded to make the sign look more garish. Uhm, I mean pretty.
- * 
- * Further info about the Unicode symbol available at :
- *      http://www.fileformat.info/info/unicode/char/26a0/index.htm
- *
- * Further info about CSS Slants available at :
- *      http://www.infimum.dk/HTML/slantinfo.html
- * 
- * @TODO: Calculate *exact* triangle dimensions:
- *      (border-left-width + border-right-width) * 0.866% = border-bottom-width
+ * If you hover over the sign, the outline of each individual component will light up.
  */
 .⚠ {
     position: relative; /* So we can position the content as absolute */
@@ -60,7 +49,26 @@
         height: 0.99em;
         width: 1.077em;
     }
-
+    
+    
+/* Additional style to show how its done */
+	.⚠:hover {
+		outline: 1px solid;
+    	transform: skew(-20deg, -10deg);
+    	border-left-color: rgba(0, 0, 0, 0.5);
+    	border-right-color: rgba(0, 0, 0, 0.5);
+	}
+	
+    .⚠:hover::before {
+		outline: 1px solid yellow;
+    	border-left-color: rgba(255, 255, 0, 0.5);
+    	border-right-color: rgba(255, 255, 0, 0.5);
+	}
+	
+    .⚠:hover::after {
+		outline: 1px solid;
+	}
+	
 
 /* Additional style to tart up the page */
 html {
