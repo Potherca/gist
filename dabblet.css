@@ -9,7 +9,7 @@
  * else that bothered me was the fact that there was no way to change the look of the
  * sign, as that was implemented in the used font. In this attempt, the exclamation mark
  * is an actual exclamation mark and the sign effect is created by positioning two 
- * CSS-border-triangles over eachother, a smaller one over a lerger one.
+ * CSS-border-triangles over eachother, a smaller one over a larger one.
  *
  * If you hover over the sign, the outline of each individual component will light up.
  */
