@@ -12,6 +12,8 @@
  * CSS-border-triangles over eachother, a smaller one over a larger one.
  *
  * If you hover over the sign, the outline of each individual component will light up.
+ *
+ * @see: http://dabblet.com/gist/6981659
  */
 .⚠ {
     position: relative; /* So we can position the content as absolute */
