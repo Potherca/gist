@@ -1,56 +1,59 @@
-The following list contains all of the conventions I can think of to include in the convention list.
-Some of these may be dropped under influence of comments or lack of good examples.
+The following list contains all of the conventions I can think of to include in 
+the convention list. It is based on a comparison of various conventions as 
+dictated by various more well-know projects.
 
-In no particular order:
+Some of these may be dropped under influence of comments or lack of good 
+examples.
 
- Whitespace
+
+Whitespace
 ----------------------------------------------
+ - Brace Placement (Class/Control Structures/Methods)
+ - File Encoding
+ - Indentation (general/switch)
+ - Line Endings
+ - Line Length (hard limit/soft Limit)
+ - Space (Control Structure Brackets/Around Param Block/Method Declaration Inside Param Block)
 
- - Indent spaces or tabs
- - Line length
- - Line endings
- - Closing php tag present or not
- - Blank line after `<?php` opening token or not
- - Indentation of case/break from switch
- - Space after Function/Method declaration
- - Space after Class declaration
- - Space after Control declaration
 
- Line breaks
+Naming Convention
 ----------------------------------------------
+ - Class Names
+ - Class Constant Names
+ - Class Method Names
+ - Class Variable Names
+ - Constant Names
+ - Function Names
+ - Namespace Usage
+ - PHP Constants Casing
+ - PHP Keyword Casing
 
- - Class brace same or next line
- - Method brace same or next line
- - Control brace same or next line
- - else/elseif same or next line
-
-
- Naming Convention
+Other
 ----------------------------------------------
-
- - Class names
- - Function/Method names
- - Constant names
- - true/false/null lowercase or uppercase
-
-
- Misc. (by want of a better name)
-----------------------------------------------
-
- - Declaration of `static` first or visibility `public`/`protected`/`private` first
+ - Method Declare Order
+ - Dockblocks
+ - Error Level
+ - Closing Tags
+ - Short Tags (general/echo)
  - Always use Control braces
 
  Castaways and Cutouts
 ----------------------------------------------
 
-There are several things mentioned that I don't think fall under "code style clash" but rather good/bad practices.
-I don't intent to include these unless a strong case can be made for 'm.
+There are several things mentioned that I don't think fall under "code style 
+clash" but rather good/bad practices. I don't think these need to be included. 
+Also, various things might be too tricky to measure and should be left out 
+because of that.
 
  - Declaration of global variables and global constants
  - Declaration of Functions
- - Operators and assignment
- - Inter-line alignment
+ - Operators and assignment (Yoda Conditions/Left Side Comparison)
+ - Inter-line alignment     (Vertical Lining Up Values)
  - Comments and documentation blocks
  - Class name prefixes and suffixes
+ - Usage of include_once versus require_once?
+ - Usage of underscore '_' for private/protected properties? (PSR explicitly says no, some others explicitly say yes. Could be interesting to see?)
+ - Conventions for file names
 
-__EOF__
+
+__EOF__ 
