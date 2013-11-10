@@ -8,9 +8,9 @@ A request [had already been made][1] so I decided to [pick up the gauntlet][2].
 
 My plan of attack is as follows:
 
-1. make a list of all the coding style conventions the different PHP factions 
-   tend to squabble or complain about
-2. Add code examples explaining the different possible variations
+1. <del>make a list of all the coding style conventions the different PHP factions 
+   tend to squabble or complain about</del>
+2. <del>Add code examples explaining the different possible variations</del>
 3. Solicit feedback from a few more renowned (or opinionated) community members 
    with the aid of semaphores, tin-can-phone or smoke signals. Or twitter if my 
    wife still won't let me play with matches.
@@ -30,7 +30,7 @@ possible convention conflicts. I got a bit _too_ obsessed with the detail for a
 while there, causing some delay. Various [yaks][5] needed [shaving][6] an I 
 changed jobs during that period as well, but I got my act together in the end.
 
- Step 1 - Compose as list 
+ <del>Step 1</del> - Compose as list 
 ----------------------------------------------
 
 The best place to go to find out which coding style clashes we as a community 
@@ -38,7 +38,7 @@ have seemed to me to be the FIG site. Based on the PSR-1 and PSR-2 I came up
 with the list below.
 
 
- Step 2 - Add examples
+ <del>Step 2</del> - Add examples
 ----------------------------------------------
 
 Several weekendends later, my list sort of turned into [a side project][4] in 
