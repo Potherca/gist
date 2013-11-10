@@ -370,31 +370,31 @@
 ### Class Variable Name in camelCase
 
     class Foo {
-        $barBaz;
+        protected $barBaz;
     }
     
 ### Class Variable Name in PascalCase
 
     class Foo {
-        $BarBaz;
+        protected $BarBaz;
     }
     
 ### Class Variable Name in CAPS_SNAKE_CASE
 
     class Foo {
-        $BAR_BAZ;
+        protected $BAR_BAZ;
     }
     
 ### Class Variable Name in Snake_Pascal_Case
 
     class Foo {
-        $Bar_Baz;
+        protected $Bar_Baz;
     }
     
 ### Class Variable Name in snake_case
 
     class Foo {
-        $bar_baz;
+        protected $bar_baz;
     }
     
  Constant Names
