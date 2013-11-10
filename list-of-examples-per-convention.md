@@ -77,13 +77,13 @@
 
     <?php
     
-        echo 'Give a man some breathing space!';
+        // The line above this comment is empty
         // ...
 
 ###  No blank line after `<?php` opening token
 
     <?php
-        echo 'As snug as a bug in a rug!';
+        // The line above this comment is used
         // ...
 
 
@@ -182,38 +182,38 @@
     // ...
 
  
- Space (Control Structure)
+ Space Around Control Structure Evaluation Block
 --------------------------------------------------------------------------------
 
-###  Space around control structure condition block
+###  Space around control structure Evaluation block
 
     if ($baz) {
         // ...
     }
 
-###  No space around control structure condition block
+###  No space around control structure Evaluation block
 
     if($baz){
         // ...
     }
 
- Space (Control Structure Brackets)
+ Space Inside Control Structure Evaluation Block
 --------------------------------------------------------------------------------
 
-###  Space inside control structure condition block
+###  Space inside control structure Evaluation block
 
     if ( $baz ) {
         // ...
     }
 
-###  No space inside control structure condition block
+###  No space inside control structure Evaluation block
 
     if($baz) {
         // ...
     }
 
 
- Space (Method Declaration Around Param Block)
+ Space Around Method Declaration Param Block
 --------------------------------------------------------------------------------
 
 ###  Space around parameter declaration block
@@ -229,7 +229,7 @@
     }
 
 
- Space (Method Declaration Inside Param Block)
+ Space Inside Method Declaration Param Block
 --------------------------------------------------------------------------------
 
 ###  Space inside parameter declaration block
