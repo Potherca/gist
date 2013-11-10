@@ -1,211 +1,770 @@
  Whitespace
-----------------------------------------------
+================================================================================
 
-###  Indent spaces or tabs
+ File Encoding
+--------------------------------------------------------------------------------
 
-    function foo() {
-      // uses two spaces for indentation
-      return "bar";
-    }
+### File encoded uses ISO-8859-1
 
-    function foo() {
-        // uses four spaces for indentation
-        return "bar";
-    }
+### File encoded uses UTF-8
 
-    function foo() {
-    	// uses one tab for indentation
-    	return "bar";
-    }
+ Brace Placement (Class)
+--------------------------------------------------------------------------------
 
-###  Line length
+### Class opening/closing braces on seperate line (Allman)
 
-
-    // Break before hitting the 80 character line
-    $iterator = new RecursiveDirectoryIterator($folder, 
-        FilesystemIterator::KEY_AS_PATHNAME 
-        | FilesystemIterator::CURRENT_AS_FILEINFO 
-        | FilesystemIterator::SKIP_DOTS);
-
-    // Break before hitting the 120 character line
-    $iterator = new RecursiveDirectoryIterator($folder, FilesystemIterator::KEY_AS_PATHNAME 
-        | FilesystemIterator::CURRENT_AS_FILEINFO | FilesystemIterator::SKIP_DOTS);
-
-    // I Break for no-one!
-    $iterator = new RecursiveDirectoryIterator($folder, FilesystemIterator::KEY_AS_PATHNAME | FilesystemIterator::CURRENT_AS_FILEINFO | FilesystemIterator::SKIP_DOTS);
-
-###  Line endings
-
-    @TODO
-
-###  Closing php tag present or not
-
-    <?php
-        echo 'php closing tag is for suckers!';
-        // ...
-    //EOF
-    
-    <?php
-        echo 'You open it, you close it!';
-        // ...
-    ?>
-    
-###  Blank line after `<?php` opening token or not
-
-    <?php
-        echo 'No blank line after opening tag.';
-        // ...
-    ?>
-
-    <?php
-    
-        echo 'Blank line after opening tag.';
-        // ...
-    ?>
-
-###  Indentation of case/break from switch
-
-    @TODO
-
-###  Space after Function/Method declaration
-
-    function foo(){
-        return "bar";
-    }
-
-    function foo() {
-        return "bar";
-    }
-
-###  Space after Class declaration
-
-    class Foo{
-        // ...    
-    }
-
-    class Foo {
-        // ...    
-    }
-
-###  Space after Control declaration
-    if($foo){
-        // ...
-    }
-
-    if($foo) {
-        // ...
-    }
-
- Line breaks
-----------------------------------------------
-
-###  Class brace same or next line
-
-    class Foo {
-        // ...    
-    }
-
-    class Foo
-    {
-        // ...    
-    }
-
-###  Function/Method brace same or next line
-
-    function foo() {
-        // ...
-    }
-
-    function foo()
+    class Foo 
     {
         // ...
     }
 
-###  Control brace same or next line and else/elseif same or next line
+### Class structure opening/closing braces on same line as declaration (OTBS)
 
-    if($foo) {
+    class Foo {
         // ...
+    }
+
+ Brace Placement (Control Structures)
+--------------------------------------------------------------------------------
+
+### Control structure opening/closing braces on same line as declaration (OTBS)
+    if($baz) {
+        // ..
     } else {
-        // ...
-    }
+        // ..
+    }    
 
-    if($foo) {
-        // ...
-    } 
-    elseif($bar) {
-        // ...
-    } 
-    else {
-        // ...
+### Control structure braces on same line as declaration, except for closing brace (Stroustrup)
+    if($baz) {
+        // ..
     }
-    
-    if($foo) 
+    else {
+        // ..
+    }    
+
+### Control structure opening/closing braces on seperate line from declaration (Allman)
+    if($baz)
     {
-        // ...
-    } 
-    elseif($bar) 
-    {
-        // ...
+        // ..
     } 
     else 
     {
+        // ..
+    }    
+
+
+ Brace Placement (Methods)
+--------------------------------------------------------------------------------
+
+### Method opening/closing braces on seperate line (Allman)
+
+    function bar($baz)
+    {
+        // ...
+    }
+
+### Method structure opening braces on same line as declaration (OTBS)
+
+    function bar($baz) {
         // ...
     }
 
 
+ Blank line after `<?php` opening token
+--------------------------------------------------------------------------------
+
+###  Blank line after `<?php` opening token
+
+    <?php
+    
+        echo 'Give a man some breathing space!';
+        // ...
+
+###  No blank line after `<?php` opening token
+
+    <?php
+        echo 'As snug as a bug in a rug!';
+        // ...
+
+
+ Indentation (general)
+--------------------------------------------------------------------------------
+
+### 2 Spaces for Indentation
+
+    class Foo {
+      function bar($baz) {
+        // uses two spaces for indentation
+      }
+    }
+
+### 4 Spaces for Indentation
+
+    class Foo {
+        function bar($baz) {
+            // uses four spaces for indentation
+        }
+    }
+
+### Tabs for Indentation
+
+    class Foo {
+    	function bar($baz) {
+    		// uses one tab for indentation
+    	}
+    }
+
+ Indentation (switch -> case)
+--------------------------------------------------------------------------------
+
+### Don`t indent 'case' from 'switch'
+
+    switch($baz){
+    case 'bar':
+    // Regardless of where the `break` is
+    }
+
+### Indent 'case' one level from 'switch'
+
+    switch($baz){
+        case 'bar':
+        // Regardless of where the `break` is
+    }
+
+### Indent 'case' two levels from 'switch'
+
+    switch($baz){
+            case 'bar':
+            // Regardless of where the `break` is
+    }
+
+
+ Indentation (switch -> break)
+--------------------------------------------------------------------------------
+
+### Don`t indent 'break' from 'switch'
+
+    switch($baz){
+    // Regardless of where the `case` is
+    break;
+    }
+    
+### Indent 'break' one level from 'switch'
+
+    switch($baz){
+        // Regardless of where the `case` is
+        break;
+    }
+
+### Indent 'break' two levels from 'switch'
+
+    switch($baz){
+            // Regardless of where the `case` is
+            break;
+    }
+
+ Line Endings
+--------------------------------------------------------------------------------
+
+### Mac Style Line Ending (CR)
+
+    echo 'foo';
+    // ...
+    
+### Windows Style Line Ending (CRLF)
+
+    echo 'foo';
+    // ...
+
+### UNIX Style Line Ending (LF)
+
+    echo 'foo';
+    // ...
+
+ 
+ Space (Control Structure)
+--------------------------------------------------------------------------------
+
+###  Space around control structure condition block
+
+    if ($baz) {
+        // ...
+    }
+
+###  No space around control structure condition block
+
+    if($baz){
+        // ...
+    }
+
+ Space (Control Structure Brackets)
+--------------------------------------------------------------------------------
+
+###  Space inside control structure condition block
+
+    if ( $baz ) {
+        // ...
+    }
+
+###  No space inside control structure condition block
+
+    if($baz) {
+        // ...
+    }
+
+
+ Space (Method Declaration Around Param Block)
+--------------------------------------------------------------------------------
+
+###  Space around parameter declaration block
+
+    function bar ($baz) {
+        // ...
+    }
+
+###  No space around parameter declaration block
+    
+    function bar($baz){
+        // ...
+    }
+
+
+ Space (Method Declaration Inside Param Block)
+--------------------------------------------------------------------------------
+
+###  Space inside parameter declaration block
+
+    function bar( $baz ){
+        // ...
+    }
+
+###  No space inside parameter declaration block
+    
+    function bar($baz){
+        // ...
+    }
+
+
+
  Naming Convention
-----------------------------------------------
+================================================================================
 
-###  Class names
+ Class Names
+--------------------------------------------------------------------------------
 
-    @TODO
+### Class Name in camelCase
 
-###  Function/Method names
+    class fooBarBaz {
+        // ...
+    }
 
-    @TODO
+### Class Name in PascalCase
 
-###  Constant names
+    class FooBarBaz {
+        // ...
+    }
 
-    @TODO
+### Class Name in CAPS_SNAKE_CASE
 
-###  true/false/null lowercase or uppercase
+    class FOO_BAR_BAZ {
+        // ...
+    }
 
-    @TODO
+### Class Name in Snake_Pascal_Case
 
- Misc. (by want of a better name)
-----------------------------------------------
+    class Foo_Bar_Baz {
+        // ...
+    }
 
-###  Declaration of `static` first or visibility `public`/`protected`/`private` first
+### Class Name in snake_case
+
+    class foo_bar_baz {
+        // ...
+    }
+
+### Class Snake_first_letter_uppercase
+
+    class Foo_bar_baz {
+        // ...
+    }
+
+ Class Constant Names
+--------------------------------------------------------------------------------
+
+### Class Constant Name in camelCase
+
+    class Foo {
+        const barBaz = 0;
+    }
+    
+### Class Constant Name in PascalCase
+
+    class Foo {
+        const BarBaz = 0;
+    }
+    
+### Class Constant Name in CAPS_SNAKE_CASE
+
+    class Foo {
+        const BAR_BAZ = 0;
+    }
+    
+### Class Constant Name in Snake_Pascal_Case
+
+    class Foo {
+        const Bar_Baz = 0;
+    }
+    
+### Class Constant Name in snake_case
+
+    class Foo {
+        const bar_baz = 0;
+    }
+    
+ Class Method Names
+--------------------------------------------------------------------------------
+
+### Class Method Name in camelCase
+
+    class Foo {
+        public function barBaz(){
+            // ...
+        }
+    }
+    
+### Class Method Name in PascalCase
+
+    class Foo {
+        public function BarBaz(){
+            // ...
+        }
+    }
+    
+### Class Method Name in CAPS_SNAKE_CASE
+
+    class Foo {
+        public function BAR_BAZ(){
+            // ...
+        }
+    }
+    
+### Class Method Name in Snake_Pascal_Case
+
+    class Foo {
+        public function Bar_Baz(){
+            // ...
+        }
+    }
+    
+### Class Method Name in snake_case
+
+    class Foo {
+        public function bar_baz(){
+            // ...
+        }
+    }
+    
+ Class Variable Names
+--------------------------------------------------------------------------------
+
+### Class Variable Name in camelCase
+
+    class Foo {
+        $barBaz;
+    }
+    
+### Class Variable Name in PascalCase
+
+    class Foo {
+        $BarBaz;
+    }
+    
+### Class Variable Name in CAPS_SNAKE_CASE
+
+    class Foo {
+        $BAR_BAZ;
+    }
+    
+### Class Variable Name in Snake_Pascal_Case
+
+    class Foo {
+        $Bar_Baz;
+    }
+    
+### Class Variable Name in snake_case
+
+    class Foo {
+        $bar_baz;
+    }
+    
+ Constant Names
+--------------------------------------------------------------------------------
+
+### Constant Name in camelCase
+
+    define('barBaz', 0);
+
+### Constant Name in PascalCase
+
+    define('BarBaz', 0);
+
+### Constant Name in CAPS_SNAKE_CASE
+
+    define('BAR_BAZ', 0);
+
+### Constant Name in Snake_Pascal_Case
+
+    define('Bar_Baz', 0);
+
+### Constant Name in snake_case
+
+    define('bar_baz', 0);
+
+ Function Names
+--------------------------------------------------------------------------------
+
+### Function Name in camelCase
+
+    function barBaz(){
+        // ...
+    }
+    
+### Function Name in PascalCase
+
+    function BarBaz(){
+        // ...
+    }
+    
+### Function Name in CAPS_SNAKE_CASE
+
+    function BAR_BAZ(){
+        // ...
+    }
+    
+### Function Name in Snake_Pascal_Case
+
+    function Bar_Baz(){
+        // ...
+    }
+    
+### Function Name in snake_case
+
+    function bar_baz(){
+        // ...
+    }
+    
+
+
+ Namespace Usage
+--------------------------------------------------------------------------------
+
+### Use Namespace
+
+    namespace Vendor\Package {
+        class Foo {
+            // ...
+        }
+    }
+
+### Prefix Class Name instead of using Namespace
+
+    class Vendor_Package_Foo {
+        // ...
+    }
+
+
+ PHP Constants Casing
+--------------------------------------------------------------------------------
+### PHP Constants LowerCase 
+    
+    $baz = true;
+    $baz = false;
+    $baz = null;
+    
+### PHP Constants UpperCase 
+    
+    $baz = TRUE;
+    $baz = FALSE;
+    $baz = NULL;
+
+ PHP Keyword Casing
+--------------------------------------------------------------------------------
+### PHP Keywords LowerCase 
+    
+    try {
+        if(){
+            switch(){
+                // ...
+            }
+        }
+    } catch (){
+        // ...
+    }
+
+### PHP Keywords UpperCase
+
+    TRY {
+        IF(){
+            SWITCH(){
+                // ...
+            }
+        }
+    } CATCH (){
+        // ...
+    }
+
+ Other
+================================================================================
+
+ Method Declare Order
+--------------------------------------------------------------------------------
+
+### `static` declared after visibility
 
     class Foo
     {
-        public static function bar() 
+        public static function bar($baz) 
         {
             // ...
         }
     }
 
+### `static` declared before visibility
+
     class Foo
     {
-        static public function bar() 
+        static public function bar($baz) 
         {
             // ...
         }
     }
 
-###  Always use Control braces
+### `abstract` (or `final`) declared after visibility
 
-    if($foo) {
-        // ..
+    class Foo
+    {
+        public abstract function bar($baz);
+        // ...
     }
 
-    if($foo)
+### `abstract` (or `final`) declared before visibility
+
+    class Foo
+    {
+        abstract public function bar($baz);
+        // ...
+    }
+
+
+ Dockblocks
+--------------------------------------------------------------------------------
+
+### Docblocks manditory
+
+    /**
+     * The Foo Class
+     *
+     * Takes care of all of the foos
+     */
+    class Foo {
+        /**
+         * Bar a given Baz
+         * 
+         * @param $baz
+         * 
+         * @return bool
+         */
+        function bar($baz) {
+            // ...
+        }
+    }
+
+### Docblocks optional
+
+    class Foo {
+        function bar($baz) {
+            // ...
+        }
+    }
+
+ Closing Tags
+--------------------------------------------------------------------------------
+
+### Closing tag `?>` allowed or manditory
+
+    <?php
+        // ...
+    ?>
+    
+### Closing tag `?>` not allowed
+
+    <?php
+        // ...
+    #EOF
+
+
+ Short Tags (general)
+--------------------------------------------------------------------------------
+
+### Short tag '<?' allowed
+
+    <p>
+        <? echo $baz ?>
+    </p>
+
+### Short tag '<?' not allowed
+
+    <p>
+        <?php echo $baz ?>
+    </p>
+
+
+ Short Tags (echo)
+--------------------------------------------------------------------------------
+
+### Short echo tag '<?=' allowed
+
+    <p>
+        <?= $baz ?>
+    <p>
+
+### Short echo tag '<?=' not allowed
+
+    <p>
+        <? echo $baz ?>
+    </p>
+
+
+
+ Always use control braces
+--------------------------------------------------------------------------------
+
+###  Control braces mandatory
+
+    if($baz) {
+        // ..
+    } else {
+        // ..
+    }    
+
+###  Control braces optional
+
+    if($baz)
+        // ..
+    else
         // ..
 
-
+        
  Castaways and Cutouts
-----------------------------------------------
+================================================================================
 
-    @TO_NOT_DO
+ Linelength
+--------------------------------------------------------------------------------
 
-__EOF__
+### Limit on 80 characters
+
+    // Break before hitting the 80 character line
+    //----------------------------------40-↓------------------------------------80-↓-----------------------------------120-↓-----------------------------------160-↓-----------------------------------200-↓-----------------------------------[∞]-→
+    $iterator = new RecursiveDirectoryIterator(
+          $folder, FilesystemIterator::CURRENT_AS_FILEINFO 
+        | FilesystemIterator::KEY_AS_PATHNAME 
+        | FilesystemIterator::FOLLOW_SYMLINKS | FilesystemIterator::SKIP_DOTS 
+        | FilesystemIterator::UNIX_PATHS
+    );
+
+### Limit on 100 characters
+
+    // Break before hitting the 100 character line
+    //----------------------------------40-↓------------------------------------80-↓-----------------------------------120-↓-----------------------------------160-↓-----------------------------------200-↓-----------------------------------[∞]-→
+    $iterator = new RecursiveDirectoryIterator(
+          $folder, FilesystemIterator::CURRENT_AS_FILEINFO | FilesystemIterator::KEY_AS_PATHNAME 
+        | FilesystemIterator::FOLLOW_SYMLINKS | FilesystemIterator::SKIP_DOTS 
+        | FilesystemIterator::UNIX_PATHS
+    );
+
+
+### Limit on 120 characters
+
+    // Break before hitting the 120 character line
+    //----------------------------------40-↓------------------------------------80-↓-----------------------------------120-↓-----------------------------------160-↓-----------------------------------200-↓-----------------------------------[∞]-→
+    $iterator = new RecursiveDirectoryIterator(
+          $folder, FilesystemIterator::CURRENT_AS_FILEINFO | FilesystemIterator::KEY_AS_PATHNAME 
+        | FilesystemIterator::FOLLOW_SYMLINKS | FilesystemIterator::SKIP_DOTS | FilesystemIterator::UNIX_PATHS
+    );
+
+### No limit on line length
+
+    // I Break for no-one!
+    //----------------------------------40-↓------------------------------------80-↓-----------------------------------120-↓-----------------------------------160-↓-----------------------------------200-↓-----------------------------------[∞]-→
+    $iterator = new RecursiveDirectoryIterator($folder, FilesystemIterator::CURRENT_AS_FILEINFO | FilesystemIterator::KEY_AS_PATHNAME | FilesystemIterator::FOLLOW_SYMLINKS | FilesystemIterator::SKIP_DOTS | FilesystemIterator::UNIX_PATHS);
+
+
+Operators and assignment (Yoda Conditions/Left Side Comparison)
+--------------------------------------------------------------------------------
+
+### Normal comparison
+
+    if($baz === 'baz'){
+        // ...
+    }
+
+### Yoda Condition/Left Side Comparison
+
+    if('baz' === $baz){
+        // ...
+    }
+
+Inter-line alignment     (Vertical Lining Up Values)
+--------------------------------------------------------------------------------
+
+### Non-Aligned Values
+
+    $baz = 'baz';
+    $quux = 'qux';
+    $foozle = 'foo';
+
+### Aligned Values
+
+    $baz    = 'baz';
+    $quux   = 'qux';
+    $foozle = 'foo';
+
+
+Comments and documentation blocks
+--------------------------------------------------------------------------------
+
+### Perl Style Comments
+
+    # This is a comment
+
+### C++ Style Comments
+
+    // This is a comment
+
+### C Style Comments
+
+    /* This is a comment */
+
+
+
+Usage of underscore '_' for private/protected properties
+--------------------------------------------------------------------------------
+
+### Does not use underscore '_' for private/protected properties
+
+    class Foo {
+        protected function bar($baz) {
+            // ...
+        }
+    }
+
+
+### Uses underscore '_' for private/protected properties
+
+    class Foo {
+        protected function _bar($baz) {
+            // ...
+        }
+    }
+
+<!-- EOF -->
