@@ -11,10 +11,10 @@ My plan of attack is as follows:
 1. <del>make a list of all the coding style conventions the different PHP factions 
    tend to squabble or complain about</del>
 2. <del>Add code examples explaining the different possible variations</del>
-3. Solicit feedback from a few more renowned (or opinionated) community members 
+3. <del>Solicit feedback from a few more renowned (or opinionated) community members 
    with the aid of semaphores, tin-can-phone or smoke signals. Or twitter if my 
-   wife still won't let me play with matches.
-4. Edit the text to reflect various contributions
+   wife still won't let me play with matches.</del>
+4. <del>Edit the text to reflect various contributions</del>
 5. ...
 6. Profit!
 
@@ -46,19 +46,18 @@ it's own right but putting it all back together and drawing it back into the
 scope of this project, it looks complete.
 
 
- Step 3 - Feedback
+ <del>Step 3 - Feedback</del>
 ----------------------------------------------
 
 The first people that come to mind, other than my co-hooligans are [@skoop][7], 
 [@jaytaph][8], [@mvriel][9], [@rdohms][10], [@dr4goonis][11] and maybe 
-[@philsturgeon][12].
+[@philsturgeon][12]. 
 
 
- Step 4 - Final Edits
+ Step 4 - <del>Final Edits</del>
 ----------------------------------------------
 
-Once the dust has settled, the conclusions will be summarized here (so I don't 
-forget which changes to make).
+From the feedback I received it would seem nothing is missing, so all is good!
 
 
  Step 5 - ...
@@ -70,7 +69,7 @@ Ellipsis!
  Step 6 - Profit!
 ----------------------------------------------
 
-Or just have some more fun, maybe?
+Or just have some more fun, maybe? In either case, the information here seems complete and is ready for use.
 
 
 [1]: https://github.com/outsideris/popularconvention/issues/25
