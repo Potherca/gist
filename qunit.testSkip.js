@@ -1,9 +1,11 @@
-/*global QUnit*/
-(function($, QUnit, window){
-    QUnit.testSkip = function() {
-        QUnit.test(arguments[0] + ' (SKIPPED)', 0, function() {
+/*global QUnit, window, document*/
+(function (QUnit, window, document) {
+    'use strict';
+
+    QUnit.testSkip = function (p_sTestName) {
+        QUnit.test(p_sTestName + ' (SKIPPED)', 0, function () {
             var li = document.getElementById(QUnit.config.current.id);
-            QUnit.done(function() {
+            QUnit.done(function () {
                 li.style.background = '#FFFF99';
             });
         });
@@ -11,6 +13,6 @@
 
     window.testSkip = QUnit.testSkip;
 
-}(jQuery, QUnit, window));
+}(QUnit, window, document));
 
 /* EOF */
