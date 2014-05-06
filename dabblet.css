@@ -33,6 +33,7 @@
 	position:absolute;
 	right:0;
 	top:-0.85em;
+	-ms-transform:rotateX(90deg);
 	transform:rotateX(90deg);
 	transition:transform 0.350s ease-out;
 	width:4em;
