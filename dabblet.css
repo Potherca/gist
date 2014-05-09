@@ -1,5 +1,7 @@
 /**
  * Gravatar as fullscreen background image
+ *
+ * http://dabblet.com/gist/dab7cdd9f9fcfd093199/1c0636877b6081af33f698740a720e9d25ece924
  */
 
 body {
@@ -18,16 +20,16 @@ body:before {
 
     z-index: -1; /* Keep the background behind the content */
     
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-
--webkit-filter: blur(0.45em); 
--moz-filter: blur(0.45em); 
--o-filter: blur(0.45em); 
--ms-filter: blur(0.45em); 
-filter: blur(0.45em);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	
+	-webkit-filter: blur(0.45em); 
+	-moz-filter: blur(0.45em); 
+	-o-filter: blur(0.45em); 
+	-ms-filter: blur(0.45em); 
+	filter: blur(0.45em);
 }
   
 p {
