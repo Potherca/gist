@@ -4,9 +4,31 @@
 
 .stage-banner {}
 
-.stage-banner .current-stage-container {}
+.stage-banner .current-stage-container {
+	position: relative;
+	border: 0.1em solid;
+	display: block;
+	height: 4em;
+	width: 20.4em;
+	padding: 0;
+}
 
-.stage-banner .stage-block {}
+.stage-banner .stage-block {
+	display: block;
+	float: left;
+	height: 2em;
+	width: 2em;
+	margin: 0;
+	padding: 0;
+	border-right: 0.05em solid;
+
+	font-size: 2em;
+	line-height: 2em;
+	text-align: center;
+}
+.stage-banner .stage-block:last-child {
+	border-right: none;
+} 
 
 .stage-banner .stage-1 {}
 .stage-banner .stage-2 {}
@@ -14,6 +36,22 @@
 .stage-banner .stage-4 {}
 .stage-banner .stage-5 {}
 
-.stage-banner .stage-list {}
+.stage-description {
+	height: 1em;
+	vertical-align: top;
+}
 
+.stage-banner .stage-list {
+	display: inline-block;
+	text-align: center;
+	position:relative;
+	border-bottom: 0.1em solid;
+}
+
+.stage-banner .stage-list > * {
+	font-weight: normal;
+	display: block;
+	border: 0.1em solid;
+	border-bottom: none;
+}
 /*EOF*/
