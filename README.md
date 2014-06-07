@@ -1,6 +1,12 @@
+## Introduction
+
 In the documentation for [ASCIIToSVG][1], in regards to formatting (shape, color, style, etc.) it's [author][2] wrote:
 
 > If you have thoughts on how to do this for lines, please do let me know.
+
+Well... I may have a suggestion
+
+## Format for  boxes
 
 The format that is used for boxes is like this:
 
@@ -11,6 +17,9 @@ The format that is used for boxes is like this:
     [Red Box]: {"fill":"#aa4444"}
     [Blue Box]: {"fill":"#ccccff"}
     
+
+## Format for lines
+
 I would think using the same format that is currently used for boxes could also be used for lines:
 
 
@@ -39,8 +48,12 @@ What about vertical lines you say? Same principle applies:
     [Blue Line]: {"fill":"#ccccff"}
     
 
+## Disclamer
+
 As I am not at all aware of the inner workings of the code this may be too simple a suggestion with all sorts of downsides. 
 Working from the perspective of Idealized Design, however, this would be my suggestion.
+
+## RFC
 
 So... Comments?
 
