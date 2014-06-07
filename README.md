@@ -4,7 +4,7 @@ In the documentation for [ASCIIToSVG][1], in regards to formatting (shape, color
 
 > If you have thoughts on how to do this for lines, please do let me know.
 
-Well... I may have a suggestion
+Well... I may have a suggestion.
 
 ## Format for  boxes
 
