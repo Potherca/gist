@@ -103,7 +103,7 @@ add it to the list.
 
 [Potherca]
 
-[Google Style-guide]: https://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml?showone=CSS_Validity#CSS_Validity
+[the Google Style-guide]: https://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml?showone=CSS_Validity#CSS_Validity
 [W3C CSS Validator]: http://jigsaw.w3.org/css-validator/validator
 [perfection-quote]: http://english.stackexchange.com/questions/38837/where-does-this-translation-of-saint-exuperys-quote-on-design-come-from
 [w3c-css-spec]: http://www.w3.org/TR/CSS21/syndata.html#values
