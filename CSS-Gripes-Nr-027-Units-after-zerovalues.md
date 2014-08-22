@@ -101,10 +101,10 @@ easiest way to avoid false positives is to just leave the units out.
 If there is another (counter) argument I have missed, let me know and I will 
 add it to the list.
 
-[@Potherca]
+[Potherca]
 
 [Google Style-guide]: https://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml?showone=CSS_Validity#CSS_Validity
 [W3C CSS Validator]: http://jigsaw.w3.org/css-validator/validator
 [perfection-quote]: http://english.stackexchange.com/questions/38837/where-does-this-translation-of-saint-exuperys-quote-on-design-come-from
 [w3c-css-spec]: http://www.w3.org/TR/CSS21/syndata.html#values
-[@Potherca]: https://twitter.com/potherca
+[Potherca]: https://twitter.com/potherca
