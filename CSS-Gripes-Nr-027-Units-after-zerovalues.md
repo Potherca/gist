@@ -1,5 +1,3 @@
-# CSS Gripe nr. 027 - Units after zero values
-
 On the subject of omitting units (`%`, `px`, `em`, etc.) after zeros or not, I 
 am a proponent of omitting the unit.
 
