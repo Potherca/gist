@@ -10,27 +10,24 @@
 
 /* This is what makes the magic happen
  ---------------------------------------------------*/
-.items .outerContainer
+.items {
+
+}
+
+.outerContainer
 {
 	display: table;
 	height: 10em;
 	width: 10em;
 	overflow: hidden;
 }
-  
 
-.items .innerContainer
+.innerContainer
 {
 	display: table-cell;
 	vertical-align: middle;
 	width: 100%;
 	text-align: center;
-}
-  
-.items .innerContainer .content
-{
-	-padding: 0 1em;
-	-display: block;
 }
 
 /* This makes things more pretty
@@ -47,9 +44,9 @@ body
 		, 0 0 20em rgb(0,255,255)
 	;
 	border-radius: 1em;
-	width: 57em;
+	width: 46em;
 	position: absolute;
-	left: -28.5em;
+	left: -23em;
 	margin-left: 50%;
 	top: 50%;
 	margin-top: -5em;
