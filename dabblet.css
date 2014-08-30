@@ -1,5 +1,5 @@
 /**
- * HOW TO VERTICALLY AND HORIZONTALLY CENTER TEXT IN AN UNORDERED LIST OR DIV
+ * Adaptation of "How to vertically and horizontally center text in an unordered list or div"
  * by Andy Howard
  *
  * Please visit the original article at:
@@ -33,7 +33,7 @@
 	-display: block;
 }
 
-/* This makes things nice looking
+/* This makes things more pretty
   ----------------------------------------------------------------------------*/
 body 
 {
@@ -66,8 +66,8 @@ body
 	font-family: sans;
 }
   
-/* HIGHTLIGHT HOW ITS DONE
-  ----------------------------------------------------------------------------*/
+/* Adds highlight to emphasise how it is done
+----------------------------------------------------------------------------*/
 .items:hover > *
 {
 	outline: 0.1em solid rgb(0,255,255);
