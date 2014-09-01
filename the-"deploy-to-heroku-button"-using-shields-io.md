@@ -1,7 +1,3 @@
-<style>
-img {max-width:auto !important;}
-</style>
-
 ## The standard button
 Although the technology and philosophy behind the 'Deploy to Heroku' Button are quite awesome, the default look may not what you want.
 For one thing there is a distinct difference between the PNG and SVG versions Heroku has on offer.
