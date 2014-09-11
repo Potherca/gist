@@ -1,43 +1,7 @@
 /**
- * Button Group with Zurb Foundation
+ * Zurb Foundation -- Button Variations
  */
 
-.custom-button-group {
-	display: inline-block;
-	border-radius: 0.25em;
-	outline: 1px solid red;
-	text-align: left;
-}
-
-.custom-button-group > .button,
-.custom-button-group > * {
-	display: block;
-	visibility: hidden;
-	margin: 0.5em;
-}
-
-.custom-button-group :nth-child(1) {
-    display: block;
-	visibility: visible;
-}
-
-.custom-button-group:hover {
-  	box-shadow: 0 0 0.1em 0 #000
-  		, 0 0 0.5em 0.1em #333
-  	;
-}
-  	
-.custom-button-group:hover > .button,
-.custom-button-group:hover > * {
-	display: block;
-	visibility: visible;
-}
-
-
-
-
-/* STYLES BELOW NOT NEEDED FOR BUTTON GROUP, JUST HERE TO ALIGN THINGS
- **************************************************************************************/
 .wrapper {
 	text-align: center;
 	position: relative;
@@ -45,19 +9,15 @@
 	transform: translateY(-50%);	
 }
  
-/* The ghost, nudged to maintain perfect centering */
 .wrapper:before {
   content: '';
   display: inline-block;
   height: 100%;
   vertical-align: middle;
-  margin-right: -0.25em; /* Adjusts for spacing */
 }
 
-/* The element to be centered, can
-   also be of any width and height */ 
-.custom-button-group {
-  /*vertical-align: middle;*/
+.wrapper > div {
+	display: inline-block;
 }
 
 /*EOF*/
