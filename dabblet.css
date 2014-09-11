@@ -1,6 +1,7 @@
 /**
  * Button Group with Zurb Foundation
  */
+@import url('//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.3/css/foundation.min.css');
 
 .custom-button-group {
 	display: inline-block;
