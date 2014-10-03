@@ -9,15 +9,17 @@ body {
 
 .province:hover {stroke: black; stroke-width: 2;}
 .unknown {stroke: red; fill:red; stroke-width: 0;}
-.Drenthe {fill: #67000D;}
-.Flevoland {fill: #741621;}
-.Friesland {fill: #822C36;}
-.Gelderland {fill: #90424A;}
-.Groningen {fill: #9E595F;}
-.Limburg {fill: #AC6F74;}
-.Noord-Brabant {fill: #B98588;}
-.Noord-Holland {fill: #C79B9D;}
-.Overijssel {fill: #D5B2B2;}
-.Utrecht {fill: #E3C8C6;}
-.Zeeland {fill: #F1DEDB;}
-.Zuid-Holland {fill: #FFF5F0;}
+.Drenthe, #Drenthe {fill: #67000D;}
+.Flevoland, #Flevoland {fill: #741621;}
+.Friesland, #Friesland {fill: #822C36;}
+.Gelderland, #Gelderland {fill: #90424A;}
+.Groningen, #Groningen {fill: #9E595F;}
+.Limburg, #Limburg {fill: #AC6F74;}
+.Noord-Brabant, #Noord-Brabant {fill: #B98588;}
+.Noord-Holland, #Noord-Holland {fill: #C79B9D;}
+.Overijssel, #Overijssel {fill: #D5B2B2;}
+.Utrecht, #Utrecht {fill: #E3C8C6;}
+.Zeeland, #Zeeland {fill: #F1DEDB;}
+.Zuid-Holland, #Zuid-Holland {fill: #FFF5F0;}
+
+/*EOF*/
