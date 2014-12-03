@@ -4,7 +4,7 @@ namespace PhpHooligans;
 
 /**
  * 
- * @param $callable
+ * @param \Closure $callable
  *
  * @return bool
  */
