@@ -1,4 +1,4 @@
 /* */
 window.onload = function(){
-	alert('foo');
+	$('header').find('h1').arctext({radius: 300})
 }
