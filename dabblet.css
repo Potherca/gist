@@ -48,6 +48,7 @@ article {
 	padding: 0.01em;
 	border: 0.1em solid red;
 	box-shadow: 0 0 1em red;
+	max-width: 40em;
 }
 
 article h2 {
