@@ -69,6 +69,7 @@ article ul {
 article li {
 	text-align: left;
 	font-family: 'Open Sans', sans-serif;
-	color: red;
-	text-shadow: 0 0 0.1em black;
+	color: black;
+	list-style: none;
+	text-shadow: 0 0 1em white;
 }
