@@ -1,2 +1,2 @@
 /* */
-$('header').find('h1').arctext({radius: 150})
+$('header').find('h1').arctext({radius: 500})
