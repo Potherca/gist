@@ -1,0 +1,38 @@
+/**
+ * Quick mockup for movie night CSS
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Codystar);
+@import url(http://fonts.googleapis.com/css?family=Monoton);
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;	
+	width: 100%;
+}
+body {
+	background: no-repeat center center fixed; 
+	background-image: url(http://msfilms-pro.markshipperleyfi.netdna-cdn.com/wp-content/uploads/2015/01/theatre-curtains-for-home-decoration.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+header {
+	width: 80%;
+	margin: 1em auto;
+	background: #f06;
+	background: linear-gradient(45deg, #f06, yellow);
+	text-align: center;
+}
+
+header h1 {
+	font-family: 'Monoton', cursive;
+	letter-spacing: 0.25em;
+	color: white;
+}
+
+header h2 {	font-family: 'Codystar', cursive;
+	color: yellow;
+	text-shadow: 0 0 0.1em white;
+}
