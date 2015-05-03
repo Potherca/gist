@@ -1,3 +1,19 @@
 /**
  * ASCII Art version of the Potherca Cartoon Avatar
  */
+ 
+ .background {
+ 	color: red;
+ }
+ 
+ .hair {
+ 	color: darkbrown;
+ }
+ 
+ .skin {
+ 	color: pink;
+}
+
+.shirt {
+	color: darkblue;
+}
