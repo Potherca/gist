@@ -1,0 +1,30 @@
+/**
+ * Various "Build in" banners
+ */
+
+ @import url("//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css");
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-glyphicons.css");
+body {
+  text-align: center;
+  margin: 2em;
+}
+.icon-montreal {  
+	margin-bottom: -1px;  
+	margin-left: 1px;  
+	display: inline-block;  
+	height: 14px;  
+	width: 14px;  
+	background-image: url('http://stillmaintained.com/img/mtl.jpg');
+}
+
+.glyphicon {  
+	position: relative;  
+	top: 1px;  
+	display: inline-block;  
+	font-family: 'Glyphicons Halflings';  
+	font-style: normal;  
+	font-weight: normal;  
+	line-height: 1;  
+	-webkit-font-smoothing: antialiased;  
+	-moz-osx-font-smoothing: grayscale;
+}
