@@ -8,6 +8,11 @@ body {
   text-align: center;
   margin: 2em;
 }
+
+img {
+	width: 50%;
+	max-width: 12em;
+}
 .icon-montreal {  
 	margin-bottom: -1px;  
 	margin-left: 1px;  
