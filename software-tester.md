@@ -12,7 +12,7 @@ The list below is what was suggested by [various people](https://twitter.com/pot
  - Logic Alchemist
  - Software Detective
  - Software Explorer
- - Software Investigator/explorer, 
+ - Software Investigator, 
  - Someone who gives a shit
  - System Reconnaissance Specialist (SysReconSpec)
  - Technical Entomologist
