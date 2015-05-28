@@ -8,6 +8,7 @@ The list below is what was suggested by [various people](https://twitter.com/pot
  - Digital Entomologist
  - Empirical Epistemologist
  - Head of Product Suitability
+ - Il Collaudatore
  - Logic Alchemist
  - Software Detective
  - Software Explorer
@@ -16,6 +17,5 @@ The list below is what was suggested by [various people](https://twitter.com/pot
  - System Reconnaissance Specialist (SysReconSpec)
  - Technical Entomologist
  - Tester
- - il collaudatore
  - That Guy Asking Questions
  - The "what if" Guy
