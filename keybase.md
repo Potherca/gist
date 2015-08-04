@@ -4,17 +4,23 @@ I hereby claim:
 
   * I am potherca on github.
   * I am potherca (https://keybase.io/potherca) on keybase.
-  * I have a public key whose fingerprint is 38A0 1164 F67C 54F3 9212  2FE7 66CB FC19 9F24 CCC6
+  * I have a public key whose fingerprint is C878 1AE1 5AE4 527F 85CA  D253 74A7 6635 76B3 B461
 
 To claim this, I am signing this object:
 
 ```json
 {
     "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.8.16"
+        },
         "key": {
-            "fingerprint": "38a01164f67c54f392122fe766cbfc199f24ccc6",
+            "eldest_kid": "0101d2819b00ab1c5a46b38f704c3c663050c23dd14aeaa844e1a432242fc5e364fc0a",
+            "fingerprint": "c8781ae15ae4527f85cad25374a7663576b3b461",
             "host": "keybase.io",
-            "key_id": "66cbfc199f24ccc6",
+            "key_id": "74a7663576b3b461",
+            "kid": "0101d2819b00ab1c5a46b38f704c3c663050c23dd14aeaa844e1a432242fc5e364fc0a",
             "uid": "910617b9f1bea0eeb19b0cb4ed92b900",
             "username": "potherca"
         },
@@ -25,38 +31,43 @@ To claim this, I am signing this object:
         "type": "web_service_binding",
         "version": 1
     },
-    "ctime": 1401280822,
+    "ctime": 1438724183,
     "expire_in": 157680000,
-    "prev": "da2dc7d090a1418e0ad7b5a6d7b7965ecfaa3bbe9a359cd6dbcc1c89c425104c",
-    "seqno": 2,
+    "prev": "64264325dd67f4382ef9a65ea7770d17a1ece9000ad8dad2f1243b73b573d955",
+    "seqno": 5,
     "tag": "signature"
 }
 ```
 
-with the PGP key whose fingerprint is
-[38A0 1164 F67C 54F3 9212  2FE7 66CB FC19 9F24 CCC6](https://keybase.io/potherca)
-(captured above as `body.key.fingerprint`), yielding the PGP signature:
+with the key [C878 1AE1 5AE4 527F 85CA  D253 74A7 6635 76B3 B461](https://keybase.io/potherca), yielding the signature:
 
 ```
 -----BEGIN PGP MESSAGE-----
-Version: Keybase OpenPGP v0.1.17
-Comment: https://keybase.io/crypto
+Version: GnuPG/MacGPG2 v2
 
-yMHcAnicdZFrSBRdGMdXs6StMNRV90Oi00sUrTFndnYu2wWtIFwqMulG1jLnzJl1
-lGZ3Z2c3dVFeQUPB6KJ0o8gE0dLFL+4HKVMiBPUlSoSKIryEZZARLxaosZ4V+1bn
-wzmc3/P//x8enueb1pjMCdLQv6zxsNabMDr4JWgqrn/LhSnolSspZ5gqxyuPomoe
-rPt0VTMoJ2UXJBoAjlU4HjlYxS4ygGEUzHMcggoCoqgwLEKIo2xUqTcQd5AYKAXw
-LtVLGPm4VZnQP+iDKwUR0BzgoagAiCUaYwhESCPIYllkoEjTcWEA65p0ARO1z2uU
-Yh1JVLWNIjSkIkLD1GrVoxqlQfh3h1Hpi6OLGLpXzW6oajIZmHhCWA+oXo1yAqJE
-hhp3A5YGjEALDGOjcIVP1bFbjSscPCfQ5Ngon45DJFKWGBnxMi3SEmCBgGlJ5qFD
-4sjNi5wDI0WS7BBiUbI7RCRzMkQIIEFELOMANItI/wD2a17KSToZkodEBlSPJhlB
-HVPVzwZLkkwJZtO6tYnxlZnM6zf/XqQ1lhxzRa+mv9te/N/niYqaX0s5ltm9p/dZ
-ClrnEoH/53TEVuhqjO44c8X6qWng5JvJJ9+Hbm/tmag5kjJ6s63rdXrP4bFz7Mir
-8c5IueVQ91TonnA3u8qRej38rdVvffootTnY+U/7mJCWWLJIz32Uo+Nb8GxGuK1W
-Q5eTysyNvYVfp/oHF2dm5Nxt19r7Fl7as3JH5q0vin7ETpQlf0jeEN0fKelzFuQf
-yGup6409vlWfpTe3WoaHJ4U0bjqlhe/OLcpuuH/n6ELRgOn47P9NeurCsfd76J1d
-Z+eRWne+ZndHfybbdjDzQXjjUt4N/2jkkpHf0Xequ2G8drrK5copyMlYBtjgFEY=
-=FPVS
+owGtUmtMFFcY3eUVISECKS5NW4VpfBQ3OO+ZhRZioSBpbAuRClSyuTNzhx0Wd9d9
+8VxZILRVGkVr1cUmxGdpCjZ0CWuTogJKCmi1dIsBCc+UlqqRoEawaDtDaGKT9l/v
+r5t7zznfOd/3NYQHqlap7V+IlNPbDtQDs5wqpwvdWYFwZqEMSaxA+GIJmuzKzQR2
+QyQRMcIyDthggmSONZkFmFBki13BaBEntNoks0lGoQlsAkYjLq2CV9iwWIA2u94o
+CcovhmICzmI6DkUBh/EUIGmOYEUGJXmCp2kCpVAeJwQBIwEEgCVJiAGSwHESF3kK
+EjQp8iiQC4qSqRBaLVZJsYjwLMNiAGIUgCSFMyJL8UDAKYIhASOLUoxchCNpTCYa
+zDb7P8Igy071y/b+Bf8/+3Ysy+kwlMYYTidiHAQohJwizHMkFHQ4p0NRBWiD1pXG
+W8x2A7TyQGmq/OqUePjcWAolu8HB/TfDXmZRnkogp18h6znJJMj9e35umKtBi/B2
+SaFjJMEyOImxhBaBpRbJCvWSApHbwqLy0SIWK3TKmjSJ03JIShBoRpRJOBR1gKYg
+YBgGFTAGYJCHchwUCKwgD0TEcJLgGIKjGELQURSi5NljMiOJlOwTFMqSNqnQBOwO
+K0Rc+wJeDlKpV6lCggOUzVSFhUb8va5pmyJUHffUlz66ETe/o1GkcwdK1jrPnG/M
+HR2Mye35oWjpQN13UcFxW4dzF0ay8kbjk30b0ny/thac0+WU95Ua+A3GLGdHX37k
++ZnmkR1HtmWOngq7+fnwVMwv1yfPdno6zEf+9KQORfbnJUvpg9dLXwpfnTrc2n/p
+25+82VdfKPt4j/tW142gPJe7olz9JH2h0Q+MkePu6bz8yz3Nn75dXeu+VjL21uLI
+5bjOxYlUdV3KGs8rh4ZCT12J3Vtd5r9IPawpef1FgVqY/TL8fnhGZMaDqsl79Z3B
+1Jm5E6FNu6beu+C/PR+td9d1Bw62OzKj1ZbRAQ+qO+nbeftgkiNvJr5/e0uVJt2H
+Yubcq6Vf+V4tqjWYMgPyZ71fryt+13PhZvaHjx+Wz61XN8B5w5raWuQP7xVNvb5y
+t8uzPXnj2tiZyH3aN9ML3kj0j1e/f1oMOvtJzf7pWElV/9khf8zmlBBNU8fTXb9N
+z+nNlWm9670/T57uimgZm71T/OPq7I13TW3N42MVR7tTbHdAlMO47sDSuZ79+dNb
+2GJnU03Y0S11ba6nv38zgWclOcSsqoZgd1/3TOmzza3+cXT+wf3hW/DYdGhO28TW
++Gcnlgpa2psdg3vDO3pPalD4/cWeqde2aULEtN6kx8KmqIiMmNTF43e7D3NPQrsC
+r0UVvFM59cHQI8RKPxrsPzgU/Rc=
+=FmSV
 -----END PGP MESSAGE-----
 
 ```
@@ -80,3 +91,4 @@ keybase encrypt potherca -m 'a secret message...'
 
 # ...and more...
 ```
+
