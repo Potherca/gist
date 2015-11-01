@@ -47,6 +47,7 @@ function setSymfonyDatabaseVariablesFromUrl() {
     aParts=(${aParts[1]//\// })
 
     sHost=${aParts[0]}
+    # @FIXME: Check $sHost for ':' and split into sHost/sPort
     sName=${aParts[1]}
 
     aParts=(${sCredentials//:/ })
@@ -54,6 +55,7 @@ function setSymfonyDatabaseVariablesFromUrl() {
     sUser=${aParts[0]}
     sPass=${aParts[1]}
 
+    # @TODO: Set PORT if present
     heroku config:set \
         SYMFONY__DATABASE__USER="${sUser}" \
         SYMFONY__DATABASE__PASSWORD="${sPass}" \
@@ -70,7 +72,7 @@ function validateHerokuSetup() {
 
     $(command -v "heroku" >/dev/null 2>&1) &&  printStatus 'Heroku toolbelt is installed' || (open 'https://toolbelt.heroku.com/' && exit)
 
-    #echo -e '\nDo you need to sign up for an Heroku account? (y/n) ' | indent
+    #echo -e '\nDo you need to sign up for an Heroku account? (y/n) '
     #read -s -n 1 -p '' sReply
     #
     #if [ "${sReply}" == "y" ] ; then
@@ -97,7 +99,7 @@ function createProject() {
 
     printStatus "Installing ${g_sSource}. This may take a while..."
 
-    php -d memory_limit="${sPhpMemoryLimit}" composer.phar create-project --no-interaction "${g_sSource}" "${g_sProject}" | indent
+    php -d memory_limit="${sPhpMemoryLimit}" composer.phar create-project --no-interaction "${g_sSource}" "${g_sProject}"
 
 }
 # ==============================================================================
@@ -108,50 +110,71 @@ function commitProject() {
 # ------------------------------------------------------------------------------
     printTopic 'Committing Project'
 
-    git init | indent
-    git add . | indent
-    git commit -m "Clean install of '${g_sSource}'." | indent
+    git init
+    git add .
+    git commit -m "Clean install of '${g_sSource}'."
 }
 # ==============================================================================
 
 
 # ==============================================================================
-function addApcDependency() {
+function addPhpExtensions() {
 # ------------------------------------------------------------------------------
-    printTopic 'Adding APC to Composer'
+    printStatus 'Adding PHP Extensions to Composer'
 
-    php -d memory_limit="${sPhpMemoryLimit}" ../composer.phar require 'ext-apcu' '*' | indent
+    php -d memory_limit="${sPhpMemoryLimit}" ../composer.phar require 'ext-apcu' '*'
+    php -d memory_limit="${sPhpMemoryLimit}" ../composer.phar require 'ext-mbstring' '*'
+#    php -d memory_limit="${sPhpMemoryLimit}" ../composer.phar require 'ext-intl' '*'
 
     printStatus 'Committing to local repository'
-    git add 'composer.*' | indent
-    git commit -m 'Adds APC as composer dependency.' | indent
+    git add 'composer.*'
+    git commit -m 'Adds PHP Extensions as composer dependency.'
 }
 # ==============================================================================
 
-
-# ==============================================================================
-function addIntlDependency() {
-# ------------------------------------------------------------------------------
-    printTopic 'Adding INTL to Composer'
-
-    php -d memory_limit="${sPhpMemoryLimit}" ../composer.phar require 'ext-intl' '*' | indent
-
-    printStatus 'Committing to local repository'
-    git add composer.* | indent
-    git commit -m 'Adds Intl as composer dependency.' | indent
-}
-# ==============================================================================
 
 # ==============================================================================
 function createHerokuApp() {
 # ------------------------------------------------------------------------------
     printTopic 'Creating Heroku App'
-
     heroku apps:create "${g_sProject}" --region 'eu'
     heroku config:set SYMFONY_ENV='prod'
 
-    printTopic 'Adding Heroku Addons.'
+    addBuildPacks
+    addAddons
+    addProcFile
+}
+# ==============================================================================
+
+
+# ==============================================================================
+function addAddons() {
+# ------------------------------------------------------------------------------
+    printTopic 'Adding Addons to Heroku'
+    # @TODO: PostGreSQL -- heroku addons:create heroku-postgresql:hobby-dev
+    # MySQL
     heroku addons:create cleardb:ignite
+    # ElasticSearch
+    #heroku addons:create searchbox:starter
+}
+# ==============================================================================
+
+
+# ==============================================================================
+function addBuildPacks() {
+# ------------------------------------------------------------------------------
+    printTopic 'Adding buildpacks to Heroku'
+    heroku buildpacks:set 'https://github.com/heroku/heroku-buildpack-multi'
+
+    printStatus 'Creating buildpack file.'
+#    echo 'https://github.com/heroku/heroku-buildpack-ruby' >> '.buildpacks'
+    echo 'https://github.com/heroku/heroku-buildpack-nodejs' >> '.buildpacks'
+    echo 'https://github.com/heroku/heroku-buildpack-php' >> '.buildpacks'
+
+    printStatus 'Committing to local repository'
+    git add '.buildpacks'
+    git commit -m "Creates buildpack file for Heroku."
+
 }
 # ==============================================================================
 
@@ -172,21 +195,33 @@ function addProcFile() {
 # ==============================================================================
 function patchDatabaseConfig() {
 # ------------------------------------------------------------------------------
-    printTopic 'Adjusting the database configuration'
+    local sPath
 
-    local sPath='app/config/parameters.yml.dist'
+    sPath='app/config/parameters.yml.dist'
+    printTopic "Adjusting the database configuration in ${sPath}"
 
     # the `-i.bak` is a workaround for OSX :-(
-    sed -i.bak 's/database_host:              127.0.0.1/database_host:              %database.host%"/g' "${sPath}"
-    sed -i.bak 's/database_name:              kunstmaanbundles/database_name:              %database.name%"/g' "${sPath}"
-    sed -i.bak 's/database_password:          ~/database_password:          %database.password%"/g' "${sPath}"
-    sed -i.bak 's/database_user:              travis/database_user:              %database.user%"/g' "${sPath}"
+    sed -i.bak 's/database_host:              127.0.0.1/database_host:              %database.host%/g' "${sPath}"
+    sed -i.bak 's/database_name:              kunstmaanbundles/database_name:              %database.name%/g' "${sPath}"
+    sed -i.bak 's/database_password:          ~/database_password:          %database.password%/g' "${sPath}"
+    sed -i.bak 's/database_user:              travis/database_user:              %database.user%/g' "${sPath}"
+    # @TODO: sed -i.bak 's/database_port:              ~/database_port:              %database.port%/g' "${sPath}"
 
     rm "${sPath}.bak"
 
     printStatus 'Committing to local repository'
     git add "${sPath}"
     git commit -m "Adjusts database configuration for Heroku."
+
+
+    sPath='app/config/parameters.yml'
+    printTopic "Adjusting the database configuration in ${sPath}"
+
+    sed -i.bak "s/database_host: 127.0.0.1/database_host: $(heroku config:get SYMFONY__DATABASE__HOST)/g" "${sPath}"
+    sed -i.bak "s/database_name: kunstmaanbundles/database_name: $(heroku config:get SYMFONY__DATABASE__NAME)/g" "${sPath}"
+    sed -i.bak "s/database_password: null/database_password: $(heroku config:get SYMFONY__DATABASE__PASSWORD)/g" "${sPath}"
+    sed -i.bak "s/database_user: travis/database_user: $(heroku config:get SYMFONY__DATABASE__USER)/g" "${sPath}"
+    #sed -i.bak "s/database_port: null/database_port: $(heroku config:get SYMFONY__DATABASE__PORT)/g" "${sPath}"
 }
 # ==============================================================================
 
@@ -218,18 +253,22 @@ function deploy() {
 # ==============================================================================
 function createBundle() {
 # ------------------------------------------------------------------------------
-    printStatus 'Creating Symfony Bundle'
-
     local sVendor
 
     sVendor="$(echo ${g_sVendor:0:1} | tr '[a-z]' '[A-Z]')${g_sVendor:1}"
 
+    printTopic "Generating ${sVendor}\WebsiteBundle"
     app/console kuma:generate:bundle --no-interaction --namespace="${sVendor}\\WebsiteBundle" --dir=src/
-    app/console kuma:generate:default-site
-
     printStatus 'Committing to local repository'
     git add .
-    git commit -m "Adds WebsiteBundle."
+    git commit -m "Adds Website Bundle."
+
+    printTopic 'Generating Site'
+    app/console kuma:generate:default-site --no-interaction
+    #@TODO: Fix broken fixture mapping and generate using the `--demosite` flag
+    printStatus 'Committing to local repository'
+    git add .
+    git commit -m "Adds Site."
 }
 # ==============================================================================
 
@@ -246,8 +285,15 @@ function openAdminPanel() {
 # ==============================================================================
 function initialiseDatabase() {
 # ------------------------------------------------------------------------------
-    heroku run php app/console doctrine:schema:create
-    heroku run php app/console doctrine:fixtures:load --no-interaction
+#    app/console doctrine:database:create
+    printTopic 'Initialising Database'
+
+    printStatus 'Creating Schema'
+    php app/console doctrine:schema:create
+
+    printStatus 'Loading Fixtures'
+    # @TODO: Catch output and grep for admin user/password
+    php app/console doctrine:fixtures:load --no-interaction
 }
 # ==============================================================================
 
@@ -255,6 +301,8 @@ function initialiseDatabase() {
 # ==============================================================================
 function installAssets() {
 # ------------------------------------------------------------------------------
+    # @FIXME: Running asset install on Heroku is not going to work. Another solution is required.
+    #         That solutions is *not* running asset install locally and committing the changes!
     heroku run 'npm install -g bower'
     heroku run 'npm install -g gulp'
     heroku run 'npm install -g uglify-js'
@@ -278,23 +326,25 @@ function run() {
     createProject
 
     cd "${g_sProject}"
+
     commitProject
-    addApcDependency
-    #addIntlDependency
-    addProcFile
+    addPhpExtensions
 
     createHerokuApp
+
     setSymfonyDatabaseVariablesFromUrl "$(heroku config:get CLEARDB_DATABASE_URL)"
 
-    # @TODO: Replace parameters in parameters.yml.dist with %var%
     patchLogConfig
     patchDatabaseConfig
 
-    deploy
-
+    createBundle
     initialiseDatabase
 
-    #openAdminPanel
+    deploy
+
+    openAdminPanel
+
+    heroku logs -t
 }
 # ==============================================================================
 
