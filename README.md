@@ -15,7 +15,7 @@ From there, a few steps are needed to be made to get things in order to run on H
 
 Creating an app on Heroku and adding a database was trival.
 
-The first hurdles is that, though Heroku provides an URL for a database (through an environmental variable), the Symfony framework wants to be fed each piece of that connection string (user, password, host, name) individually.
+The first hurdle is that, though Heroku provides an URL for a database (through an environmental variable), the Symfony framework wants to be fed each piece of that connection string (user, password, host, name) individually.
 It doesn't take much work to get this in order, but it is a bit of a shame that Symfony is not smart enough to simply accept a connection URL.
 
 The next thing was that, although the DB was accesible and could be reached from a test file (see [db-dns-check.php](./db-dns-check.php)) it could not be reached by the Symfony application.
