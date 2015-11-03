@@ -122,6 +122,7 @@ function addPhpExtensions() {
 # ------------------------------------------------------------------------------
     printStatus 'Adding PHP Extensions to Composer'
 
+    # @CHECKMEL Is there a way of add extendsion to composer.json without having to run `composer require` locally?
     php -d memory_limit="${sPhpMemoryLimit}" ../composer.phar require 'ext-apcu' '*'
     php -d memory_limit="${sPhpMemoryLimit}" ../composer.phar require 'ext-mbstring' '*'
 #    php -d memory_limit="${sPhpMemoryLimit}" ../composer.phar require 'ext-intl' '*'
@@ -217,6 +218,8 @@ function patchDatabaseConfig() {
     sPath='app/config/parameters.yml'
     printTopic "Adjusting the database configuration in ${sPath}"
 
+    # @TODO: Either get the config once and parse it or "remember" the values from where they were set
+
     sed -i.bak "s/database_host: 127.0.0.1/database_host: $(heroku config:get SYMFONY__DATABASE__HOST)/g" "${sPath}"
     sed -i.bak "s/database_name: kunstmaanbundles/database_name: $(heroku config:get SYMFONY__DATABASE__NAME)/g" "${sPath}"
     sed -i.bak "s/database_password: null/database_password: $(heroku config:get SYMFONY__DATABASE__PASSWORD)/g" "${sPath}"
@@ -299,22 +302,56 @@ function initialiseDatabase() {
 
 
 # ==============================================================================
-function installAssets() {
+function patchComposer() {
 # ------------------------------------------------------------------------------
-    # @FIXME: Running asset install on Heroku is not going to work. Another solution is required.
-    #         That solutions is *not* running asset install locally and committing the changes!
-    heroku run 'npm install -g bower'
-    heroku run 'npm install -g gulp'
-    heroku run 'npm install -g uglify-js'
-    heroku run 'npm install -g uglifycss'
+    printTopic 'Adding compile scripts to composer'
 
-    heroku run 'bundle install'
-    heroku run 'npm install'
-    heroku run 'bower install'
-    heroku run 'gulp build'
+    #    heroku run 'npm install -g bower'
+    #    heroku run 'npm install -g gulp'
+    #    heroku run 'npm install -g uglify-js'
+    #    heroku run 'npm install -g uglifycss
+    # @TODO: Validate these ara all run:
+    #    heroku run 'bundle install'
+    #    heroku run 'npm install'
+    #    heroku run 'bower install'
+    #
+    #    heroku run 'gulp build'
 
-    heroku run 'php app/console assets:install --symlink'
-    heroku run 'php app/console assetic:dump'
+    sPath='composer.json'
+    sReplacement='"scripts": {\
+        "compile": [\
+            "app/console assets:install",\
+            "php app/console assetic:dump --env=prod --no-debug"\
+        ],'
+
+    sed -i.bak "s#\"scripts\": {#${sReplacement}#g" "${sPath}"
+
+    printStatus 'Committing to local repository'
+    git add .
+    git commit -m "Adds Site."
+}
+# ==============================================================================
+
+
+# ==============================================================================
+function patchPackageJon() {
+# ------------------------------------------------------------------------------
+    printTopic 'Patching package.json'
+
+    sPath='package.json'
+    sReplacement='"dependencies": {\
+        "bower": "*",\
+        "gulp": "*",\
+        "uglifycss": "*",\
+        "uglify-js": "*"\
+    },\
+    "devDependencies": {'
+
+    sed -i.bak "s#\"devDependencies\": {#${sReplacement}#g" "${sPath}"
+
+    printStatus 'Committing to local repository'
+    git add .
+    git commit -m "Adds Node dependencies."
 }
 # ==============================================================================
 
@@ -328,17 +365,22 @@ function run() {
     cd "${g_sProject}"
 
     commitProject
-    addPhpExtensions
 
     createHerokuApp
 
+    # @CHECKME: Would using DATABAS_URL work?
+    # heroku config:set $(heroku config --shell | grep CLEARDB_DATABASE_URL | sed -e 's/^CLEARDB_//')
     setSymfonyDatabaseVariablesFromUrl "$(heroku config:get CLEARDB_DATABASE_URL)"
 
     patchLogConfig
     patchDatabaseConfig
+    patchComposer
+    addPhpExtensions
+    patchPackageJon
 
     createBundle
     initialiseDatabase
+
 
     deploy
 
