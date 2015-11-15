@@ -9,6 +9,6 @@ One fateful afternoon, I was creating an account somewhere... It could have been
 
 Anyway, playing around with words, I had typed in the username `pot her cannabis`. As it turns out, the place did not accept user-names with more than 8 characters. And it did not accept spaces in user-names. It also did not tell me this.
 
-It just stripped the whitespace and cut the input of after the eight character, leaving me with the username `potherca`.
+It just stripped the whitespace and cut the input off after the eight character, leaving me with the username `potherca`.
 
 It looked cool enough, so I stuck with it for a while. I started using other handles less and less, and it's been with me ever since.
