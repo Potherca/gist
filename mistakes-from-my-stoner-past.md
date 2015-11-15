@@ -11,4 +11,4 @@ Anyway, playing around with words, I had typed in the username `pot her cannabis
 
 It just stripped the whitespace and cut the input off after the eighth character, leaving me with the username `potherca`.
 
-It looked cool enough, so I stuck with it for a while. I started using other handles less and less, and it's been with me ever since.
+It looked cool enough, so I stuck with it for a while. I started using other handles less and less, and "potherca" has been with me ever since.
