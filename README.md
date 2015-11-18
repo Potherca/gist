@@ -32,6 +32,8 @@ Go ahead, be a rebel. I'm sure no-one will mind, as long as it works.
 
 Please be aware that folders/files _must_ match the namespace/classname capitalization. So if your class is called `Foo\bar` the filepath must be `Foo/bar.php`
 
+Example files are included with [this gist](https://gist.github.com/potherca/2d3de34f114479b06c89/)
+
 ## Variation on a theme
 
 Because of the way the "aliassing" works, it is not possible to add a "sub-namespace". If you have your heart set on using `MyVendor\MyPlugin` instead of the admittedly ugly `MyVendor_MyPlugin`, the `src` directory should be registered as vendor `\YiiBase::setPathOfAlias('MyVendor', __DIR__ . '/src');` and a directory needs to be created in `src` named `MyPlugin`.
