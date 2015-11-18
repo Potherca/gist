@@ -4,7 +4,7 @@ Working with Craft (like any other system) means that you are stuck doing things
 
 One of the things where this becomes clear is when developers want to use arbitrary classes in their Craft plugins.
 
-Usually this means people just dump the class somewhere (like in the services or model directory), bung an appropriate suffix to their classname (for instance `Service` or `Model`) so the class will get auto-loaded and [Bob's you uncle](https://en.wikipedia.org/wiki/Bob%27s_your_uncle).
+Usually this means people just dump the class somewhere (like in the services or model directory), bung an appropriate suffix to their classname (for instance `Service` or `Model`) so the class will get auto-loaded and [Bob's your uncle](https://en.wikipedia.org/wiki/Bob%27s_your_uncle).
 
 Of course this has the disadvantage that your meticulously crafted SOAP client is now called `SoapClientModel`.
 
