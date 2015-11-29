@@ -35,6 +35,9 @@
  * @license    GPL-3.0+
  *             https://spdx.org/licenses/GPL-3.0.html
  * @copyright  2009
+ *
+ * Note: The variable naming scheme used in this code is an adaption of 
+ * Systems Hungarian which is explained at http://pother.ca/VariableNamingConvention/
  */
 class __Function
 {
