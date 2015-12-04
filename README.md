@@ -14,9 +14,7 @@ The [Github transfer process](https://help.github.com/articles/transferring-a-re
 
 There does not seem to be a call to transfer ownership in the [Github API](https://developer.github.com/v3/). Or there is and I'm too lazy to find it. So I went another route...
 
-I created a bookmarklet that does all the work. I opened all the repository pages and clicked the [bookmarklet](https://en.wikipedia.org/wiki/Bookmarklet).
-
-<kbd><a href="javascript:void%20function(){var%20t=$(%22%23rename_field%22).val(),r=$(%22[itemprop=title]%22).text()+%22-contrib%22;$(%22%23transfer_button%22).trigger(%22click%22),$(%22%23confirm_repository_name%22).val(t),$(%22%23confirm_new_owner%22).val(r),$(%22[action*=transfer]%20button[type=submit]%22).removeAttr(%22disabled%22).trigger(%22click%22)}();]">Transfer Ownership Bookmarklet</a></kbd>
+I created [a bookmarklet that does all the work](https://gist.github.com/potherca/f4ad083c710acd19026d#file-transfer-github-ownership-js). Then I simply opened all the repository pages and clicked the [bookmarklet](https://en.wikipedia.org/wiki/Bookmarklet).
 
 ## It's a wrap
 
