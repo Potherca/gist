@@ -14,7 +14,9 @@ The [Github API](https://developer.github.com/v3/) does not seem to have a call 
 
 I created a [bookmarklet](https://en.wikipedia.org/wiki/Bookmarklet) that does all the work. I simply opened all of the repository pages and clicked the bookmarklet.
 
-<kbd>(Transfer Ownership Bookmarklet)[javascript:void%20function(){var%20t=$(%22%23rename_field%22).val(),r=$(%22[itemprop=title]%22).text()+%22-contrib%22;$(%22%23transfer_button%22).trigger(%22click%22),$(%22%23confirm_repository_name%22).val(t),$(%22%23confirm_new_owner%22).val(r),$(%22[action*=transfer]%20button[type=submit]%22).removeAttr(%22disabled%22).trigger(%22click%22)}();]</kbd>
+<kbd>
+<a href="javascript:void%20function(){var%20t=$(%22%23rename_field%22).val(),r=$(%22[itemprop=title]%22).text()+%22-contrib%22;$(%22%23transfer_button%22).trigger(%22click%22),$(%22%23confirm_repository_name%22).val(t),$(%22%23confirm_new_owner%22).val(r),$(%22[action*=transfer]%20button[type=submit]%22).removeAttr(%22disabled%22).trigger(%22click%22)}();]">Transfer Ownership Bookmarklet</a>
+</kbd>
 
 ## Finish
 
