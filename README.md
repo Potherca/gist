@@ -16,6 +16,36 @@ rather than passed in as a parameter.
 
 Below is the output of the script when the script is run with various debug levels:
 
+### Error Output
+
+    $ bash /path/to/debug-example.sh
+    
+    Errors occurred:
+    
+     Wrong parameter count
+    
+    ==============================================================================
+                                  GIT SPLIT FILE
+    ------------------------------------------------------------------------------
+    Usage: debug-example.sh <name> <debug-level>
+    
+    This script gives an example of how built-in debugging can be implemented in
+    a bash script. It offers the infamous "Hello world!" functionality to
+    demonstrate it's workings.
+    
+    This script requires at least one parameter: a string that will be output.
+    An optional second parameter can be given to set the debug level.
+    The default is set to 0, see below for other values:
+    
+    DEBUG_LEVEL 0 = No Debugging
+    DEBUG_LEVEL 1 = Show Debug messages
+    DEBUG_LEVEL 2 = " and show Application Calls
+    DEBUG_LEVEL 3 = " and show called command
+    DEBUG_LEVEL 4 = " and show all other commands (=set +x)
+    DEBUG_LEVEL 5 = Show All Commands, without Debug Messages or Application Calls
+    ==============================================================================
+
+
 ### Debug Level 0 (the default)
 
      $ bash /path/to/debug-example.sh World
