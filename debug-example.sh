@@ -3,7 +3,7 @@
 ##==============================================================================
 ##                               GIT SPLIT FILE
 ##------------------------------------------------------------------------------
-## Usage: debug-trap-test.sh <name> <debug-level>
+## Usage: debug-example.sh <name> <debug-level>
 ##
 ## This script gives an example of how built-in debugging can be implemented in
 ## a bash script. It offers the infamous "Hello world!" functionality to
