@@ -1,8 +1,14 @@
 #!/usr/bin/env bash
 
 ##==============================================================================
-##                               GIT SPLIT FILE
+##                            DEBUG EXAMPLE SCRIPT
 ##------------------------------------------------------------------------------
+#
+# @NOTE: The variable naming scheme used in this code is an adaption of Systems 
+# Hungarian which is explained at http://pother.ca/VariableNamingConvention/
+#
+# ------------------------------------------------------------------------------
+##
 ## Usage: debug-example.sh <name> <debug-level>
 ##
 ## This script gives an example of how built-in debugging can be implemented in
@@ -11,6 +17,7 @@
 ##
 ## This script requires at least one parameter: a string that will be output.
 ## An optional second parameter can be given to set the debug level.
+##
 ## The default is set to 0, see below for other values:
 ##
 # ==============================================================================
