@@ -8,7 +8,7 @@ In such instances using [the DEBUG trap](http://tldp.org/LDP/Bash-Beginners-Guid
 Attached to this gist is a example script to demonstrate how such a thing would
 work.
 
-To easily demonstrate it's working, the `DEBUG_LEVEL` has been set as a parameter
+To easily demonstrate it's working, the `DEBUG_LEVEL` has been set as a parameter.
 In real live situations it would more likely be set as an environmental variable
 rather than passed in as a parameter.
 
