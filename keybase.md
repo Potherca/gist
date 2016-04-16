@@ -4,7 +4,7 @@ I hereby claim:
 
   * I am [potherca](https://github.com/potherca/) on github.
   * I am potherca (https://keybase.io/potherca) on keybase.
-  * I have a public key whose fingerprint is C878 1AE1 5AE4 527F 85CA  D253 74A7 6635 76B3 B461
+  * I have a public key whose fingerprint is `C878 1AE1 5AE4 527F 85CA  D253 74A7 6635 76B3 B461`
 
 To claim this, I am signing this object:
 
