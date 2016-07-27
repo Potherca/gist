@@ -1,6 +1,6 @@
 ## TODO
 
-- [x] Create Jison definition that parses a single line
+- [ ] Create Jison definition that parses a single line
 - [ ] Expand the Jison definition to parse all given lines
 - [ ] Add more syntax support:
   - [ ] **Composite state** - A composite state can be define using the `state` keywords and brackets.
