@@ -1,7 +1,7 @@
 ## TODO
 
 - [x] Create Jison definition that parses a single line
-- [ ] Expand the Jison definition to parse all given lines
+- [x] Expand the Jison definition to parse all given lines
 - [ ] Add more syntax support:
   - [ ] **Composite state** - A composite state can be define using the `state` keywords and brackets.
   - [ ] **Long name** - The `state` keyword can be used to add long description for states.

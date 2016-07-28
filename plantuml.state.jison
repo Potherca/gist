@@ -15,12 +15,6 @@
  * For full syntax definition see:
  */
 
-%{
-if (!('regions' in yy)) {
-    yy.regions = [];
-}
-%}
-
 /* lexical grammar */
 %lex
 
@@ -40,41 +34,18 @@ if (!('regions' in yy)) {
 %% /* language grammar */
 
 expressions
-    : content EOF
-        {
-            console.log(yy.regions);
-            return yy.regions; 
-        }
-    | EOF
-        {
-            console.log("empty file");
-            return yy.regions; 
-        }
-    ;
+    : content NEWLINE expressions
+    | content expressions
+    | EOF {return yy.results || [];}
+;
 
 content
-    : line NEWLINE content
-    | line NEWLINE
-    | line
-    ;
-
-line
-    : WORD ARROW WORD COLON WORD
-        {
-            if (!('regions' in yy)) {
-                yy.regions = [];
-            }
-
-            if (! $5) {
-                $5 = 'from' + $1 + 'To' + $3;
-            }
-
-            yy.regions.push({
-             "name" : $5,
-             "from" : $1,
-             "to" : $3
-          });
-            console.log(yy.regions);
-            return yy.regions;
-        }
-    ;
+    : WORD ARROW WORD COLON WORD {
+            if (!('results' in yy)) {yy.results = [];}
+            yy.results.push({
+                "name" : $5,
+                "from" : $1,
+                "to" : $3
+            });
+    }
+;
