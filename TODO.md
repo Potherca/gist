@@ -3,6 +3,7 @@
 - [x] Create Jison definition that parses a single line
 - [x] Expand the Jison definition to parse all given lines
 - [ ] Add more syntax support:
+  - [ ] **Comments** - Single or multi-line comments using `' … ` or `/' … '/`.
   - [ ] **Composite state** - A composite state can be define using the `state` keywords and brackets.
   - [ ] **Long name** - The `state` keyword can be used to add long description for states.
   - [ ] **Concurrent state** - Concurrent state can be defined into a composite state using either `--` or `||` symbol as separator.
