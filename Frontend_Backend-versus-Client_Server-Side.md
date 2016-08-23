@@ -5,26 +5,27 @@ It is not.
 
 It is perfectly acceptable to have Front-End logic happen on the Server:
 
-                       System Boundry
-                             :
-                             |
-                             V
-+-------------------------+     +--------------+
-|        Front End        | --> |   Back End   |
-+-------------------------+     +--------------+
 
-+----+     +--------------+     +--------------+
-| UI | +-> |     Logic    | --> |  Application |
-+----+     +--------------+     +--------------+
-
-+--------------+     +-------------------------+
-|    Browser   | --> |          Server         |
-+--------------+     +-------------------------+
-
-                  ^
-                  |
-                  :
-            Server Boundry
+                           System Boundry
+                                 :
+                                 |
+                                 V
+    +-------------------------+     +--------------+
+    |        Front End        | --> |   Back End   |
+    +-------------------------+     +--------------+
+    
+    +----+     +--------------+     +--------------+
+    | UI | +-> |     Logic    | --> |  Application |
+    +----+     +--------------+     +--------------+
+    
+    +--------------+     +-------------------------+
+    |    Browser   | --> |          Server         |
+    +--------------+     +-------------------------+
+    
+                      ^
+                      |
+                      :
+                Server Boundry
 
 The main reason why I have a gripe with this is that the front-end is just a delivery mechanism (excellently explained by Robert Martin at Ruby Midwest 2011
  http://www.youtube.com/watch?v=WpkDN78P884)
