@@ -25,7 +25,7 @@ Below is the output of the script when the script is run with various debug leve
      Wrong parameter count
     
     ==============================================================================
-                                  GIT SPLIT FILE
+                                DEBUG EXAMPLE SCRIPT
     ------------------------------------------------------------------------------
     Usage: debug-example.sh <name> <debug-level>
     
