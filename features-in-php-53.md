@@ -1,4 +1,4 @@
-## New features in PHP 5.3.0 (2009)
+## New features in PHP 5.3 (2009)
 
 *   Support for [namespaces](http://php.net/manual/language.namespaces.php) has been added.
 *   Support for [Late Static Bindings](http://php.net/manual/language.oop5.late-static-bindings.php) has been added.

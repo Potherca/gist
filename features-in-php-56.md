@@ -1,4 +1,4 @@
-## New features
+## New features in PHP 5.6 (2014)
 
 ### Constant expressions
 

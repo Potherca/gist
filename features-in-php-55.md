@@ -1,4 +1,4 @@
-## New features in PHP 5.5.0 (2013)
+## New features in PHP 5.5 (2013)
 
 ### [Generators](http://php.net/manual/language.generators.php) added
 

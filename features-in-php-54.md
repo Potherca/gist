@@ -1,4 +1,4 @@
-## New features in PHP 5.4.0 (2012)
+## New features in PHP 5.4 (2012)
 
 * Support for [traits](http://php.net/manual/language.oop5.traits.php) has been added.
 * Short array syntax has been added, e.g. `$a = [1, 2, 3, 4];` or `$a = ['one' => 1, 'two' => 2, 'three' => 3, 'four' => 4];`.
