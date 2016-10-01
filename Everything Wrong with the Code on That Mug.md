@@ -17,6 +17,8 @@ The mug looks quite nice but sadly the code on it is crap.
 
 Honestly, if I came across such code in a peer review it would not pass.
 
+Beside these issues, the code is written in [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) (created by Microsoft) and not in the more suitable [CoffeeScript](http://coffeescript.org/)
+
 At a certain point I might feel like writing a better version.
 
 Right now, my coffee mug is empty, so I'm going to get a refil first ;-)
