@@ -1,4 +1,5 @@
-There is a post going round on facebook of a mug with some code on it. The mug looks quite nice but sadly the code on it is crap.
+There is a post going round on facebook of a mug with some code on it. 
+The mug looks quite nice but sadly the code on it is crap.
 
 - The object oriënted style abstraction
   - There is no container for the coffee
@@ -13,4 +14,6 @@ There is a post going round on facebook of a mug with some code on it. The mug l
 
 Honestly, if I came across such code in a peer review it would not pass.
 
-At a certain point I might feel like writing a better version but my coffee mug is empty right now, so I'm going to get a refil first ;-)
+At a certain point I might feel like writing a better version.
+
+Right now, my coffee mug is empty, so I'm going to get a refil first ;-)
