@@ -4,21 +4,21 @@ There is a post going round on facebook of a mug with some code on it.
 There's even [a reddit post on it](https://www.reddit.com/r/csharp/comments/3xdikm/does_anybody_know_where_i_can_find_this_mug/?st=itrfyyvi&sh=e8448c85).
 The mug looks quite nice but sadly the code on it is crap.
 
-- The object oriënted style abstraction
+- The code is not placed in a separate namespace
+- A `var` keyword is not used when assigning the `Coffee` object
+- The object oriënted style abstraction is broken
   - There is no container for the coffee
-  - There is no dispenser for the cofee
+  - There is no dispenser for the coffee
   - There is no person to drink the coffee
   - There is no SoftwareDeveloper object
-- The code is not placed in a separate namespace
+- There are flaws in the logic
+  - When the `coffee` is refilled it is not drunk
+  - The logic is only run once
+- The comment is totally useless
 - The code style does not adhere to the [C# coding standards for .NET](http://se.inf.ethz.ch/old/teaching/ss2007/251-0290-00/project/CSharpCodingStandards.pdf) 
   - 2.3. Do not create declarations of the same type (namespace, class, method, property, field, or parameter) and access modifier (protected, public, private, internal) that vary only by capitalization. 
   - 2.18. Try to prefix Boolean variables and properties with “Can”, “Is” or “Has”.
   - 4.3.33. Avoid invoking methods within a conditional expression. 
-- A `var` keyword is not used when assigning the `Coffee` object
-- The comment is totally useless
-- There are flaws in the logic
-  - When the `coffee` is refilled it is not drunk
-  - The logic is only run once
 - There is no logging, error handling or messaging
 
 Honestly, if I came across such code in a peer review it would not pass.
