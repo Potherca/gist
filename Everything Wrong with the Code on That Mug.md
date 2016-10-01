@@ -9,7 +9,12 @@ The mug looks quite nice but sadly the code on it is crap.
   - There is no dispenser for the cofee
   - There is no person to drink the coffee
   - There is no SoftwareDeveloper object
-- The code style is disappointing
+- The code is not placed in a separate namespace
+- The code style does not adhere to the [C# coding standards for .NET](http://se.inf.ethz.ch/old/teaching/ss2007/251-0290-00/project/CSharpCodingStandards.pdf) 
+  - 2.3. Do not create declarations of the same type (namespace, class, method, property, field, or parameter) and access modifier (protected, public, private, internal) that vary only by capitalization. 
+  - 2.18. Try to prefix Boolean variables and properties with “Can”, “Is” or “Has”.
+  - 4.3.33. Avoid invoking methods within a conditional expression. 
+- A `var` keyword is not used when assigning the `Coffee` object
 - The comment is totally useless
 - There are flaws in the logic
   - When the `coffee` is refilled it is not drunk
