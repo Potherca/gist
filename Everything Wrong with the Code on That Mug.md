@@ -8,6 +8,7 @@ The mug looks quite nice but sadly the code on it is crap.
   - There is no container for the coffee
   - There is no dispenser for the cofee
   - There is no person to drink the coffee
+  - There is no SoftwareDeveloper object
 - The code style is disappointing
 - The comment is totally useless
 - There are flaws in the logic
