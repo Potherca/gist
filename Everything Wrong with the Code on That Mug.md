@@ -1,5 +1,6 @@
-There is a post going round on facebook of a mug with some code on it.
 ![](http://i.imgur.com/uvCHW7C.jpg)
+
+There is a post going round on facebook of a mug with some code on it.
 There's even [a reddit post on it](https://www.reddit.com/r/csharp/comments/3xdikm/does_anybody_know_where_i_can_find_this_mug/?st=itrfyyvi&sh=e8448c85).
 The mug looks quite nice but sadly the code on it is crap.
 
