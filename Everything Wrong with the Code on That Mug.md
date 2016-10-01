@@ -6,7 +6,7 @@ The mug looks quite nice but sadly the code on it is crap.
 
 - The code is not placed in a separate namespace
 - A `var` keyword is not used when assigning the `Coffee` object
-- The object oriënted style abstraction is broken
+- The object oriented style abstraction is broken
   - There is no container for the coffee
   - There is no dispenser for the coffee
   - There is no person to drink the coffee
