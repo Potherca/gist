@@ -27,4 +27,4 @@ Beside these issues, the code is written in [C#](https://en.wikipedia.org/wiki/C
 
 At a certain point I might feel like writing a better version.
 
-Right now, my coffee mug is empty, so I'm going to get a refil first ;-)
+Right now, my coffee mug is empty, so I'm going to get a refill first ;-)
