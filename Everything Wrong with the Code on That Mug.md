@@ -16,9 +16,9 @@ The mug looks quite nice but sadly the code on it is crap.
   - The logic is only run once
 - The comment is totally useless
 - The code style does not adhere to the [C# coding standards for .NET](http://se.inf.ethz.ch/old/teaching/ss2007/251-0290-00/project/CSharpCodingStandards.pdf) 
-  - 2.3. Do not create declarations of the same type (namespace, class, method, property, field, or parameter) and access modifier (protected, public, private, internal) that vary only by capitalization. 
-  - 2.18. Try to prefix Boolean variables and properties with “Can”, “Is” or “Has”.
-  - 4.3.33. Avoid invoking methods within a conditional expression. 
+  - Rule 2.3. Do not create declarations of the same type (namespace, class, method, property, field, or parameter) and access modifier (protected, public, private, internal) that vary only by capitalization. 
+  - Rule 2.18. Try to prefix Boolean variables and properties with “Can”, “Is” or “Has”.
+  - Rule 4.3.33. Avoid invoking methods within a conditional expression. 
 - There is no logging, error handling or messaging
 
 Honestly, if I came across such code in a peer review it would not pass.
