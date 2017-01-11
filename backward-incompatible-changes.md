@@ -33,7 +33,7 @@ There are various minor backward incompatible changes between various versions. 
 - The magic methods `__get()`, `__set()`, `__isset()`, `__unset()`, and `__call()` must always be public and can no longer be static.
 - The `__call()` magic method is now invoked on access to private and protected methods.
 - The `func_get_arg()`, `func_get_args()` and `func_num_args()` can no longer be called from the outermost scope of a file that has been included by calling include or require from within a function in the calling file.
-- The keywords `goto` and `namespace` are now reserved keywords.
+- The words `goto` and `namespace` are now reserved keywords.
 
 ## [PHP 5.4]
 
@@ -51,6 +51,7 @@ There are various minor backward incompatible changes between various versions. 
 * [array_combine()](function.array-combine.php) now returns `array()` instead of `FALSE` when two empty arrays are provided as parameters.
 * When [htmlentities()](function.htmlentities.php) is used with an asian character sets an `E_STRICT` level error is emitted.
 * The third parameter of [ob_start()](function.ob-start.php) has changed from [boolean](language.types.boolean.php) `erase` to [integer](language.types.integer.php) `flags`. Please follow [this example](function.ob-start.php#function.ob-start.flags-bc) to write code that is compatible with PHP 5.3 and 5.4.
+- The words `callable`, `insteadof` and `trait` are now reserved keywords.
 
 ## [PHP 5.5]
 
