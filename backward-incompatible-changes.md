@@ -14,7 +14,6 @@ There are various minor backward incompatible changes between various versions. 
 
 - Code that could potentially produce memory corruption can no longer do so. However, this means that references work slightly different than they did before. The Engine was fixed to 'know' when the reference operation is being used on a value that should not be referenced. 
 
-
 ## [PHP 5.2]
 
 - `SplFileObject::getFilename()` returns the filename, not relative/path/to/file
@@ -37,23 +36,28 @@ There are various minor backward incompatible changes between various versions. 
 
 ## [PHP 5.4]
 
-* [Safe mode](features.safe-mode.php) is no longer supported.
-* [Magic quotes](security.magicquotes.php) has been removed.
-* The [register_globals](ini.core.php#ini.register-globals) and [register_long_arrays](ini.core.php#ini.register-long-arrays) `php.ini` directives have been removed.
-* [Call-time pass by reference](language.references.pass.php) has been removed.
-* The [break](control-structures.break.php) and [continue](control-structures.continue.php) statements no longer accept variable arguments (e.g., `break 1 + foo() * $bar;`). Static arguments still work, such as `break 2;`.
-* In the [date and time extension](book.datetime.php), the timezone can no longer be set using the TZ environment variable. Instead you have to specify a timezone using the [date.timezone](datetime.configuration.php#ini.date.timezone) `php.ini` option or [date_default_timezone_set()](function.date-default-timezone-set.php) function.
-* Non-numeric string offsets - e.g. `$a['foo']` where `$a` is a string - now return `FALSE` on [isset()](function.isset.php) and `TRUE` on [empty()](function.empty.php), and produce a **`E_WARNING`** when used. Offsets of types double, bool and null produce a **`E_NOTICE`**. $str='abc';var_dump(isset($str['x'])); // false for PHP 5.4 or later, but true for 5.3 or less
+* [Safe mode] is no longer supported.
+* [Magic quotes] has been removed.
+* The [register_globals] and [register_long_arrays] `php.ini` directives have been removed.
+* [Call-time pass by reference] has been removed.
+* The [break] and [continue] statements no longer accept variable arguments (e.g., `break 1 + foo() * $bar;`). Static arguments still work, such as `break 2;`.
+* In the [date and time extension], the timezone can no longer be set using the TZ environment variable. Instead you have to specify a timezone using the [date.timezone] `php.ini` option or [date_default_timezone_set()] function.
+* Non-numeric string offsets - e.g. `$a['foo']` where `$a` is a string - now return `FALSE` on [isset()] and `TRUE` on [empty()], and produce a **`E_WARNING`** when used. Offsets of types double, bool and null produce a **`E_NOTICE`**. $str='abc';var_dump(isset($str['x'])); // false for PHP 5.4 or later, but true for 5.3 or less
 * Converting an array to a string will now generate an **`E_NOTICE`** level error.
 * Turning **`NULL`**, **`FALSE`**, or an empty string into an object by adding a property will now emit an **`E_WARNING`** level error, instead of **`E_STRICT`**.
 * Parameter names that shadow super globals now cause a fatal error. This prohibits code like `function foo($_GET, $_POST) {}`.
-* The _Salsa10_ and _Salsa20_ [hash algorithms](book.hash.php) have been removed.
-* [array_combine()](function.array-combine.php) now returns `array()` instead of `FALSE` when two empty arrays are provided as parameters.
-* When [htmlentities()](function.htmlentities.php) is used with an asian character sets an `E_STRICT` level error is emitted.
-* The third parameter of [ob_start()](function.ob-start.php) has changed from [boolean](language.types.boolean.php) `erase` to [integer](language.types.integer.php) `flags`. Please follow [this example](function.ob-start.php#function.ob-start.flags-bc) to write code that is compatible with PHP 5.3 and 5.4.
+* The _Salsa10_ and _Salsa20_ [hash algorithms] have been removed.
+* [array_combine()] now returns `array()` instead of `FALSE` when two empty arrays are provided as parameters.
+* When [htmlentities()] is used with an asian character sets an `E_STRICT` level error is emitted.
+* The third parameter of [ob_start()] has changed from [boolean] `erase` to [integer] `flags`. Please follow [this example][example01] to write code that is compatible with PHP 5.3 and 5.4.
 - The words `callable`, `insteadof` and `trait` are now reserved keywords.
 
 ## [PHP 5.5]
+
+* All case insensitive matching for function, class and constant names is now performed in a locale independent manner according to ASCII rules.
+* Changes were made to [pack()] and [unpack()] to make them more compatible with Perl. The "Z" format is code now supported. Use this instead of "a", as the behaviour of "a" has changed.
+* The keywords `self`, `parent` and `static` are now always case insensitive. Prior to PHP 5.5, cases existed where the [self], [parent], and [static] keywords were treated in a case sensitive fashion.
+* The GUIDs that previously resulted in PHP outputting various logos have been removed. This includes the removal of the functions to return those GUIDs: `php_logo_guid()`](function.php-logo-guid.php), `php_egg_logo_guid()`,  `php_real_logo_guid()`, [`zend_logo_guid()`]
 
 ## [PHP 5.6]
 
@@ -65,3 +69,29 @@ There are various minor backward incompatible changes between various versions. 
 [PHP 5.5]: http://php.net/manual/en/migration55.incompatible.php
 [PHP 5.6]: http://php.net/manual/en/migration56.incompatible.php
 
+[`php_logo_guid()`]: https://php.net/manual/function.php-logo-guid.php)
+[`zend_logo_guid()`]: https://php.net/manual/function.zend-logo-guid.php
+[array_combine()]: https://php.net/manual/function.array-combine.php
+[boolean]: https://php.net/manual/language.types.boolean.php
+[break]: https://php.net/manual/control-structures.break.php
+[Call-time pass by reference]: https://php.net/manual/language.references.pass.php
+[continue]: https://php.net/manual/control-structures.continue.php
+[date and time extension]: https://php.net/manual/book.datetime.php
+[date_default_timezone_set()]: https://php.net/manual/function.date-default-timezone-set.php
+[date.timezone]: https://php.net/manual/datetime.configuration.php#ini.date.timezone
+[empty()]: https://php.net/manual/function.empty.php
+[example01]: https://php.net/manual/function.ob-start.php#function.ob-start.flags-bc
+[hash algorithms]: https://php.net/manual/book.hash.php
+[htmlentities()]: https://php.net/manual/function.htmlentities.php
+[integer]: https://php.net/manual/language.types.integer.php
+[isset()]: https://php.net/manual/function.isset.php
+[Magic quotes]: https://php.net/manual/security.magicquotes.php
+[ob_start()]: https://php.net/manual/function.ob-start.php
+[pack()]: https://php.net/manual/function.pack.php
+[parent]: https://php.net/manual/language.oop5.paamayim-nekudotayim.php
+[register_globals]: https://php.net/manual/ini.core.php#ini.register-globals
+[register_long_arrays]: https://php.net/manual/ini.core.php#ini.register-long-arrays
+[Safe mode]: https://php.net/manual/features.safe-mode.php
+[self]: https://php.net/manual/language.oop5.paamayim-nekudotayim.php
+[static]: https://php.net/manual/language.oop5.late-static-bindings.php
+[unpack()]: https://php.net/manual/function.unpack.php
