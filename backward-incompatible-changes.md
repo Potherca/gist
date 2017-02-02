@@ -55,7 +55,7 @@ There are various minor backward incompatible changes between various versions. 
 ## [PHP 5.5]
 
 * All case insensitive matching for function, class and constant names is now performed in a locale independent manner according to ASCII rules.
-* Changes were made to [pack()] and [unpack()] to make them more compatible with Perl. The "Z" format is code now supported. Use this instead of "a", as the behaviour of "a" has changed.
+* Changes were made to [pack()] and [unpack()] to make them more compatible with Perl. The "Z" format is code now supported. Use this instead of "a", as the behaviour of "a" has changed. Please follow [this example][example02] to write code that is compatible with PHP 5.4 and 5.5.
 * The keywords `self`, `parent` and `static` are now always case insensitive. Prior to PHP 5.5, cases existed where the [self], [parent], and [static] keywords were treated in a case sensitive fashion.
 * The GUIDs that previously resulted in PHP outputting various logos have been removed. This includes the removal of the functions to return those GUIDs: `php_logo_guid()`](function.php-logo-guid.php), `php_egg_logo_guid()`,  `php_real_logo_guid()`, [`zend_logo_guid()`]
 
@@ -81,6 +81,7 @@ There are various minor backward incompatible changes between various versions. 
 [date.timezone]: https://php.net/manual/datetime.configuration.php#ini.date.timezone
 [empty()]: https://php.net/manual/function.empty.php
 [example01]: https://php.net/manual/function.ob-start.php#function.ob-start.flags-bc
+[example02]: https://php.net/manual/migration55.incompatible.php#migration55.incompatible.pack
 [hash algorithms]: https://php.net/manual/book.hash.php
 [htmlentities()]: https://php.net/manual/function.htmlentities.php
 [integer]: https://php.net/manual/language.types.integer.php
