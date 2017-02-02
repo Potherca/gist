@@ -36,10 +36,6 @@ The Zend Optimiser+ opcode cache has been added to PHP as the new [OPcache exten
 
 [foreach](http://php.net/manual/control-structures.foreach.php) now supports keys of any type. While non-scalar keys cannot occur in native PHP arrays, it is possible for [Iterator::key()](http://php.net/manual/iterator.key.php) to return a value of any type, and this will now be handled correctly.
 
-### Apache 2.4 handler supported on Windows
-
-The Apache 2.4 handler SAPI is now supported on Windows.
-
 ### Improvements to GD
 
 Various improvements have been made to the GD extension, these include:
