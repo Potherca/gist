@@ -1,0 +1,13 @@
+/**
+ *
+ */
+ div {
+    background: tomato;
+    display: inline-block;
+    width: 10em;
+    height: 10em;
+    margin: 1em;
+    padding: 2em;
+    text-align: center;
+    line-height: 10em;
+}
