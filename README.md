@@ -1,7 +1,3 @@
----
-permalink: /
----
-
 # Hands-on with SimplyEdit: Automated attribute switching
 
 ![SimplyEdit Logo](https://simplyedit.io/img/logo.svg)
