@@ -1,0 +1,15 @@
+/* Simple demonstration how nth-child works */
+span {
+	width: 5em;
+	border: 0.1em solid;
+	display: inline-block;
+	text-align: center;
+}
+
+span:nth-child(5n) {  
+  display: none;
+}
+
+span:nth-child(3n) {  
+  visibility: hidden;
+}
