@@ -1,0 +1,18 @@
+/**
+ * Test for rebeccapurple support
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Satisfy);
+
+body {
+	background: rebeccapurple;
+	min-height: 100%;
+}
+
+p {
+	color: #639;
+	text-align:center;
+	margin-top: 35%;
+	font-size: 200%; 
+	font-family: Satisfy, sans-serif, sans;
+}
