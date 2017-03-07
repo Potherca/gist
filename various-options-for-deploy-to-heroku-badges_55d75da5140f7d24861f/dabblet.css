@@ -1,0 +1,23 @@
+/**
+ * Various options for "Deploy to Heroku" Badges
+ */
+ 
+ @import url(http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono);
+body {
+	font-family:'Droid Sans', Arial, sans-serif;
+}
+
+dt {text-align: right;}
+dt, dd {float: left; width: 12.5em; margin: 0.35em 0.2em ;}
+dt,dl::after {display:block; clear:left;}
+dt::after { content:":";}
+dl::after { content:"";}
+
+h2 a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+h2:hover a {
+	border-bottom: 0.1em solid ;
+}
