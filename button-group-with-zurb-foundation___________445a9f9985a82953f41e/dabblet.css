@@ -1,0 +1,90 @@
+/**
+ * Button Group with Zurb Foundation
+ *
+ * This component offers a way of give a user the option to choose 
+ * where to go after submitting a form by offering a group of buttons 
+ * to choose from. Starting out, only the "default" choice is visible.
+ * Once the user hovers over the "default" choice other options become
+ * visible.
+ *
+ * Extra styles are provided to right-align the buttons in the group,
+ * to compliment the `.right` class in Zurb.
+ *
+ * There is also the option to add extra emphasis on the boundry of 
+ * the box by adding a border to it with a `with-border` class
+ */
+@import url('//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.3/css/foundation.min.css');
+
+.custom-button-group {
+	display: inline-block;
+	border-radius: 0.25em;
+	text-align: left;
+}
+
+.custom-button-group > .button,
+.custom-button-group > * {
+	display: block;
+	visibility: hidden;
+	margin: 0.5em;
+	opacity:0;
+	transition:opacity 0.35s linear;
+}
+
+.custom-button-group :nth-child(1) {
+	visibility: visible;
+	opacity:1;
+ }
+
+.custom-button-group:hover > .button,
+.custom-button-group:hover > * {
+	visibility: visible;
+ 	opacity:1;
+}
+
+
+/* Right aligned button group
+ ********************************************************************/
+.custom-button-group.right > .button,
+.custom-button-group.right > * {
+	float: right;
+	clear: both;
+}
+
+ /* Add a border in hover when requested
+ ********************************************************************/
+.custom-button-group.with-border:hover {
+  	box-shadow: 0 0 0.1em 0 #000
+  		, 0 0 0.5em 0.1em #333
+  	;
+}
+
+ 
+/*EOF*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* STYLES BELOW NOT NEEDED FOR BUTTON GROUP, JUST HERE FOR PRESENTATION
+ ********************************************************************/
+h1, h2 {
+	clear:both;
+	width: 100%;
+	border-bottom: 1px solid rgba(0,0,0,0.15);
+ }
+ 
+.wrapper {
+	text-align: center;
+	padding: 1em;
+}
