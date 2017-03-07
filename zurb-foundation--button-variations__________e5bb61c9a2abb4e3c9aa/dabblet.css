@@ -1,0 +1,24 @@
+/**
+ * Zurb Foundation -- Button Variations
+ */
+@import url('//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.3/css/foundation.min.css');
+
+.wrapper {
+	text-align: center;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);	
+}
+ 
+.wrapper:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.wrapper > div {
+	display: inline-block;
+}
+
+/*EOF*/
