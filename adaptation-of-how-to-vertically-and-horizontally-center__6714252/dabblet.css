@@ -1,0 +1,84 @@
+/**
+ * Adaptation of "How to vertically and horizontally center text in an unordered list or div"
+ * by Andy Howard
+ *
+ * Please visit the original article at:
+ * http://www.andy-howard.com/verticalAndHorizontalAlignment/index.html
+ *
+ * This version removes some of the unneeded HTML and CSS
+ */
+
+/* This is what makes the magic happen
+ ---------------------------------------------------*/
+.items {
+
+}
+
+.outerContainer
+{
+	display: table;
+	height: 10em;
+	width: 10em;
+	overflow: hidden;
+}
+
+.innerContainer
+{
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+	text-align: center;
+}
+
+/* This makes things more pretty
+  ----------------------------------------------------------------------------*/
+body 
+{
+	background: rgb(0,139,139);
+	border: 1px solid rgb(255,255,255);
+	box-shadow: 
+		  -1em -1em 2em rgba(0,0,0,0.5)
+		, 1em 1em 2em rgba(0,0,0,0.5)
+		, -1em 1em 2em rgba(0,0,0,0.5)
+		, 1em -1em 2em rgba(0,0,0,0.5)		
+		, 0 0 20em rgb(0,255,255)
+	;
+	border-radius: 1em;
+	width: 46em;
+	position: absolute;
+	left: -23em;
+	margin-left: 50%;
+	top: 50%;
+	margin-top: -5em;
+}
+
+.items > *
+{
+	float: left;
+	margin: 1em 0.25em 1em 1em;
+
+  	background: white;
+	border-radius: 0.5em;
+	box-shadow: 0 0 0.75em white;
+	font-family: sans;
+}
+  
+/* Adds highlight to emphasise how it is done
+----------------------------------------------------------------------------*/
+.items:hover > *
+{
+	outline: 0.1em solid rgb(0,255,255);
+}
+
+.items:hover > * > *
+{
+	border: 0.1em solid rgb(245,0,140);
+}
+
+.items:hover > * > * > *
+{
+	border: 1px solid rgba(0,0,0,0.25);
+	background: rgba(0,0,0,0.1);
+}
+
+/*EOF*/
