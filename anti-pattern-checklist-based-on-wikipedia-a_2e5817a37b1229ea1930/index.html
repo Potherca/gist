@@ -1,0 +1,210 @@
+<!DOCTYP html>
+<head>
+	<meta charset="utf-8">
+	<title>Anti-patterns</title>
+	<link href="http://pother.ca/CssBase/css/base.css" rel="stylesheet"/>
+	<style>
+	body {
+		counter-reset:fail-total total;
+		min-width: 70em;
+	}
+
+	h3 {
+		text-shadow: gray 0 0 1px;
+	}
+
+	ul {
+		list-style: none;
+		counter-reset: fail-section section;
+	}
+	ul li {
+	}
+
+	ul li:before {
+		content: "\2610 \00A0 ";
+		counter-increment: section total;
+		text-shadow: gray 0 0 1px;
+	}
+
+	ul li.success:before {
+		content: "\2611 \00A0 ";
+		counter-increment: section total;
+		text-shadow: lime 0 0 1px;
+	}
+
+	ul li.fail  {
+		counter-increment: fail-section fail-total;
+	}
+
+	ul li.fail:before {
+		content: "\2612 \00A0 ";
+		text-shadow: red 0 0 1px;
+	}
+
+	body:after {
+		position: absolute;
+		top: 1em;
+		left: 16em;
+		color: white;
+		text-shadow: black 0 0 4px;
+	}
+
+	body.fulled-in:after {
+		content: counter(fail-total) " / " counter(total);
+    }
+
+	body.fulled-in ul:after {
+		margin-left: -2em;
+		display: block;
+		padding: 0;
+		content:  counter(fail-section) " / " counter(section);
+		width: 22em;
+		text-align: right;
+		position: absolute;
+		top: -2.5em;
+		left: 0;
+		color: white;
+		text-shadow: black 0 0 4px;
+	}
+
+	a {
+		color: black;
+		text-decoration: none;
+	}
+
+    @media print {
+	    div {
+            page-break-inside: avoid;
+	    }
+
+	    h3 {
+            page-break-before: always;
+	    }
+
+
+	    ul {
+		    margin-left: -2em;
+	    }
+
+	    h1 {
+			display: none;
+		}
+
+		h4 {
+		    margin-left: 0;
+	    }
+
+        body {
+    		min-width: 20cm;
+        }
+    }
+
+	</style>
+
+	<base href="http://en.wikipedia.org/"></base>
+
+</head>
+<body>
+	<h1 id="firstHeading" class="firstHeading" lang="en">Anti-pattern</h1>
+	<h3><span class="mw-headline" id="Social_and_business_operations">Social and business operations</span></h3>
+	<h4><span class="mw-headline" id="Organizational">Organizational</span></h4>
+	<ul>
+	<li><a href="/wiki/Analysis_paralysis" title="Analysis paralysis">Analysis paralysis</a>: A project stalled in the analysis phase, unable to achieve support for any of the potential plans of approach</li>
+	<li><a href="/wiki/Parkinson%27s_law_of_triviality" title="Parkinson's law of triviality">Bicycle shed</a>: Giving disproportionate weight to trivial issues</li>
+	<li><a href="/wiki/Bleeding_edge" title="Bleeding edge" class="mw-redirect">Bleeding edge</a>: Operating with cutting-edge technologies that are still untested and/or unstable, leading to cost overruns, under-performance, and/or delayed delivery</li>
+	<li><a href="/wiki/Bystander_apathy" title="Bystander apathy" class="mw-redirect">Bystander apathy</a>: A state where a decision is known to be wrong, but the people who notice this do nothing because it affects a different group of people</li>
+	<li><a href="/wiki/Cash_cow" title="Cash cow">Cash cow</a>: A profitable legacy product that often leads to complacency about new products</li>
+	<li><a href="/wiki/Design_by_committee" title="Design by committee">Design by committee</a>: The result of having many contributors to a design, but no unifying vision</li>
+	<li><a href="/wiki/Escalation_of_commitment" title="Escalation of commitment">Escalation of commitment</a>: Failing to revoke a decision when it proves wrong</li>
+	<li><a href="/wiki/Groupthink" title="Groupthink">Groupthink</a>: A collective state where group members begin to (often unknowingly) think alike and reject differing viewpoints</li>
+	<li>Lost in the weeds: Decision-making stalled by focusing too much on tiny details</li>
+	<li><a href="/wiki/Management_by_perkele" title="Management by perkele">Management by perkele</a>: Authoritarian style of management with no tolerance of dissent</li>
+	<li><a href="/wiki/Management_by_objectives" title="Management by objectives">Management by objectives</a>: Management by numbers, focus exclusively on quantitative management criteria, when these are non-essential or cost too much to acquire</li>
+	<li><a href="/wiki/Micromanagement" title="Micromanagement">Micromanagement</a>: Ineffectiveness from excessive observation, supervision, or other hands-on involvement from management</li>
+	<li><a href="/wiki/Moral_hazard" title="Moral hazard">Moral hazard</a>: Insulating a decision-maker from the consequences of his or her decision</li>
+	<li><a href="/wiki/Mushroom_management" title="Mushroom management">Mushroom management</a>: Keeping employees "in the dark and fed manure" (also "left to stew and finally canned")</li>
+	<li><a href="/wiki/Peter_Principle" title="Peter Principle" class="mw-redirect">Peter Principle</a>: Continually promoting otherwise well-performing employees up to their level of incompetence, where they remain indefinitely</li>
+	<li><a href="/wiki/Seagull_manager" title="Seagull manager">Seagull management</a>: management in which managers only interacts with employees when a problem arises, when they "fly in, make a lot of noise, dump on everyone, then fly out"</li>
+	<li><a href="/wiki/Stovepipe_(organisation)" title="Stovepipe (organisation)">Stovepipe or Silos</a>: An organizational structure of isolated or semi-isolated teams, in which too many communications take place up and down the hierarchy, rather than directly with other teams across the organization</li>
+	<li><a href="/wiki/Typecasting_(acting)" title="Typecasting (acting)">Typecasting</a>: Locking successful employees into overly safe, narrowly defined, predictable roles based on their past successes rather than their potential</li>
+	<li><a href="/wiki/Vendor_lock-in" title="Vendor lock-in">Vendor lock-in</a>: Making a system excessively dependent on an externally supplied component</li>
+	</ul>
+	<h4><span class="mw-headline" id="Project_management">Project management</span></h4>
+	<ul>
+	<li><a href="/wiki/Cart_before_the_horse" title="Cart before the horse">Cart before the horse</a>: Focusing too many resources on a stage of a project out of its sequence</li>
+	<li><a href="/wiki/Death_march_(software_development)" title="Death march (software development)" class="mw-redirect">Death march</a>: A project whose staff, while expecting it to fail, are compelled to continue, often with much overwork, by management which is in denial</li>
+	<li><a href="/wiki/Ninety-ninety_rule" title="Ninety-ninety rule">Ninety-ninety rule</a>: Tendency to underestimate the amount of time to complete a project when it is "nearly done"</li>
+	<li><a href="/wiki/Overengineering" title="Overengineering">Overengineering</a>: Spending resources making a project more robust and complex than is needed</li>
+	<li><a href="/wiki/Scope_creep" title="Scope creep">Scope creep</a>: Uncontrolled changes or continuous growth in a project’s scope, or adding new features to the project after the original requirements have been drafted and accepted (also known as requirement creep and <a href="/wiki/Feature_creep" title="Feature creep">feature creep</a>)</li>
+	<li><a href="/wiki/Smoke_and_mirrors" title="Smoke and mirrors">Smoke and mirrors</a>: Demonstrating unimplemented functions as if they were already implemented</li>
+	</ul>
+	<h3><span class="mw-headline" id="Software_engineering">Software engineering</span></h3>
+	<h4><span class="mw-headline" id="Software_design">Software design</span></h4>
+	<p><span id="General_design_anti-patterns"></span></p>
+	<ul>
+	<li><a href="/wiki/Abstraction_inversion" title="Abstraction inversion">Abstraction inversion</a>: Not exposing implemented functionality required by callers of a function/method/constructor, so that the calling code awkwardly re-implements the same functionality in terms of those calls</li>
+	<li><a href="/wiki/Ambiguous_viewpoint" title="Ambiguous viewpoint">Ambiguous viewpoint</a>: Presenting a model (usually <a href="/wiki/Object-oriented_analysis_and_design" title="Object-oriented analysis and design">Object-oriented analysis and design</a> (OOAD)) without specifying its viewpoint</li>
+	<li><a href="/wiki/Big_ball_of_mud" title="Big ball of mud">Big ball of mud</a>: A system with no recognizable structure</li>
+	<li><a href="/wiki/Database-as-IPC" title="Database-as-IPC">Database-as-IPC</a>: Using a database as the message queue for routine <a href="/wiki/Inter-process_communication" title="Inter-process communication">interprocess communication</a> where a much more lightweight mechanism would be suitable</li>
+	<li><a href="/wiki/Gold_plating_(analogy)" title="Gold plating (analogy)" class="mw-redirect">Gold plating</a>: Continuing to work on a task or project well past the point at which extra effort is adding value</li>
+	<li><a href="/wiki/Inner-platform_effect" title="Inner-platform effect">Inner-platform effect</a>: A system so customizable as to become a poor replica of the software development platform</li>
+	<li><a href="/wiki/Input_kludge" title="Input kludge">Input kludge</a>: Failing to specify and implement the handling of possibly invalid input</li>
+	<li><a href="/wiki/Interface_bloat" title="Interface bloat">Interface bloat</a>: Making an interface so powerful that it is extremely difficult to implement</li>
+	<li><a href="/wiki/Magic_pushbutton" title="Magic pushbutton">Magic pushbutton</a>: A form with no dynamic validation, or input assistance such as dropdowns</li>
+	<li><a href="/wiki/Race_hazard" title="Race hazard" class="mw-redirect">Race hazard</a>: Failing to see the consequences of events that can sometimes interfere with each other</li>
+	<li><a href="/wiki/Stovepipe_system" title="Stovepipe system">Stovepipe system</a>: A barely maintainable assemblage of ill-related components</li>
+	</ul>
+	<h4><span class="mw-headline" id="Object-oriented_programming">Object-oriented programming</span></h4>
+	<ul>
+	<li><a href="/wiki/Anemic_Domain_Model" title="Anemic Domain Model" class="mw-redirect">Anemic Domain Model</a>: The use of the <a href="/wiki/Domain_model" title="Domain model">domain model</a> without any <a href="/wiki/Business_logic" title="Business logic">business logic</a>. The domain model's objects cannot guarantee their correctness at any moment, because their validation and mutation logic is placed somewhere outside (most likely in multiple places). Martin Fowler considers this to be an anti-pattern, but some disagree that it is always an anti-pattern.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup></li>
+	<li><a href="/wiki/BaseBean" title="BaseBean">BaseBean</a>: Inheriting functionality from a <a href="/wiki/Utility_class" title="Utility class">utility class</a> rather than delegating to it</li>
+	<li><a href="/wiki/Call_super" title="Call super">Call super</a>: Requiring subclasses to call a superclass's overridden method</li>
+	<li><a href="/wiki/Circle-ellipse_problem" title="Circle-ellipse problem">Circle-ellipse problem</a>: <a href="/wiki/Subtype" title="Subtype" class="mw-redirect">Subtyping</a> variable-types on the basis of value-subtypes</li>
+	<li><a href="/wiki/Circular_dependency" title="Circular dependency">Circular dependency</a>: Introducing unnecessary direct or indirect mutual dependencies between objects or software modules</li>
+	<li><a href="/wiki/Constant_interface" title="Constant interface">Constant interface</a>: Using interfaces to define constants</li>
+	<li><a href="/wiki/God_object" title="God object">God object</a>: Concentrating too many functions in a single part of the design (class)</li>
+	<li><a href="/wiki/Object_cesspool" title="Object cesspool" class="mw-redirect">Object cesspool</a>: Reusing objects whose state does not conform to the (possibly implicit) contract for re-use</li>
+	<li><a href="/wiki/Object_orgy" title="Object orgy">Object orgy</a>: Failing to properly encapsulate objects permitting unrestricted access to their internals</li>
+	<li><a href="/wiki/Poltergeist_(computer_science)" title="Poltergeist (computer science)" class="mw-redirect">Poltergeists</a>: Objects whose sole purpose is to pass information to another object</li>
+	<li><a href="/wiki/Sequential_coupling" title="Sequential coupling">Sequential coupling</a>: A class that requires its methods to be called in a particular order</li>
+	<li><a href="/wiki/Yo-yo_problem" title="Yo-yo problem">Yo-yo problem</a>: A structure (e.g., of inheritance) that is hard to understand due to excessive fragmentation</li>
+	</ul>
+	<h4><span class="mw-headline" id="Programming">Programming</span></h4>
+	<ul>
+	<li><a href="/wiki/Accidental_complexity" title="Accidental complexity" class="mw-redirect">Accidental complexity</a>: Programming tasks which could be eliminated with better tools (as opposed to essential complexity inherent in the problem being solved)</li>
+	<li><a href="/wiki/Action_at_a_distance_(computer_science)" title="Action at a distance (computer science)" class="mw-redirect">Action at a distance</a>: Unexpected interaction between widely separated parts of a system</li>
+	<li><a href="/wiki/Blind_faith_(computer_science)" title="Blind faith (computer science)" class="mw-redirect">Blind faith</a>: Lack of checking of (a) the correctness of a bug fix or (b) the result of a subroutine</li>
+	<li><a href="/wiki/Boat_anchor_(computer_science)" title="Boat anchor (computer science)" class="mw-redirect">Boat anchor</a>: Retaining a part of a system that no longer has any use</li>
+	<li><a href="/wiki/Busy_waiting" title="Busy waiting">Busy waiting</a>: Consuming <a href="/wiki/CPU" title="CPU" class="mw-redirect">CPU</a> while waiting for something to happen, usually by repeated checking instead of messaging</li>
+	<li><a href="/wiki/Caching_failure" title="Caching failure" class="mw-redirect">Caching failure</a>: Forgetting to clear a cache that holds a negative result (error) after the error condition has been corrected</li>
+	<li><a href="/wiki/Cargo_cult_programming" title="Cargo cult programming">Cargo cult programming</a>: Using patterns and methods without understanding why</li>
+	<li><a href="/wiki/Coding_by_exception" title="Coding by exception">Coding by exception</a>: Adding new code to handle each special case as it is recognized</li>
+	<li><a href="/wiki/Design_pattern" title="Design pattern">Design pattern</a>: The use of patterns has itself been called an anti-pattern, a sign that a system is not employing enough <a href="/wiki/Abstraction_principle_(computer_programming)" title="Abstraction principle (computer programming)">abstraction</a><sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup></li>
+	<li><a href="/wiki/Error_hiding" title="Error hiding">Error hiding</a>: Catching an error message before it can be shown to the user and either showing nothing or showing a meaningless message. Also can refer to erasing the <a href="/wiki/Stack_trace" title="Stack trace">Stack trace</a> during exception handling, which can hamper debugging.</li>
+	<li><a href="/wiki/Hard_code" title="Hard code" class="mw-redirect">Hard code</a>: Embedding assumptions about the environment of a system in its implementation</li>
+	<li><a href="/wiki/Spaghetti_code#Lasagna_code" title="Spaghetti code">Lasagna code</a>: Programs whose structure consists of too many layers</li>
+	<li><a href="/wiki/Lava_flow_(programming)" title="Lava flow (programming)">Lava flow</a>: Retaining undesirable (redundant or low-quality) code because removing it is too expensive or has unpredictable consequences<sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup><sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span>[</span>7<span>]</span></a></sup></li>
+	<li><a href="/wiki/Loop-switch_sequence" title="Loop-switch sequence">Loop-switch sequence</a>: Encoding a set of sequential steps using a switch within a loop statement</li>
+	<li><a href="/wiki/Magic_number_(programming)#Unnamed_numerical_constants" title="Magic number (programming)">Magic numbers</a>: Including unexplained numbers in algorithms</li>
+	<li><a href="/wiki/Magic_string_(programming)#Magic_strings_in_code" title="Magic string (programming)" class="mw-redirect">Magic strings</a>: Implementing presumably unlikely input scenarios, such as comparisons with very specific strings, to mask functionality.</li>
+	<li><a href="/wiki/Don%27t_Repeat_Yourself" title="Don't Repeat Yourself" class="mw-redirect">Repeating yourself</a>: Writing code which contains repetitive patterns and substrings over again; avoid with <a href="/wiki/Once_and_only_once" title="Once and only once" class="mw-redirect">once and only once</a> (abstraction principle)</li>
+	<li><a href="/wiki/Shotgun_surgery" title="Shotgun surgery">Shotgun surgery</a>: Developer adds features to an application codebase which span a multiplicity of implementors or implementations in a single change</li>
+	</ul>
+	<ul>
+	<li><a href="/wiki/Softcoding" title="Softcoding">Soft code</a>: Storing business logic in configuration files rather than source code<sup id="cite_ref-8" class="reference"><a href="#cite_note-8"><span>[</span>8<span>]</span></a></sup></li>
+	<li><a href="/wiki/Spaghetti_code" title="Spaghetti code">Spaghetti code</a>: Programs whose structure is barely comprehensible, especially because of misuse of code structures</li>
+	</ul>
+	<h4><span class="mw-headline" id="Methodological">Methodological</span></h4>
+	<ul>
+	<li><a href="/wiki/Copy_and_paste_programming" title="Copy and paste programming">Copy and paste programming</a>: Copying (and modifying) existing code rather than creating generic solutions</li>
+	<li><a href="/wiki/Golden_hammer" title="Golden hammer" class="mw-redirect">Golden hammer</a>: Assuming that a favorite solution is universally applicable (See: <a href="/wiki/Silver_bullet" title="Silver bullet">Silver bullet</a>)</li>
+	<li><a href="/wiki/Improbability_factor" title="Improbability factor">Improbability factor</a>: Assuming that it is improbable that a known error will occur</li>
+	<li><a href="/wiki/Not_Invented_Here#In_computing" title="Not Invented Here" class="mw-redirect">Not Invented Here</a> (NIH) syndrome: The tendency towards <i><a href="/wiki/Reinventing_the_wheel" title="Reinventing the wheel">reinventing the wheel</a></i> (failing to adopt an existing, adequate solution)</li>
+	<li><a href="/wiki/Invented_here" title="Invented here">Invented here</a>: The tendency towards dismissing any innovation or less than trivial solution originating from inside the organization, usually because of lack of confidence in the staff</li>
+	<li><a href="/wiki/Optimization_(computer_science)#When_to_optimize" title="Optimization (computer science)" class="mw-redirect">Premature optimization</a>: Coding early-on for perceived efficiency, sacrificing good design, maintainability, and sometimes even real-world efficiency</li>
+	<li><a href="/wiki/Programming_by_permutation" title="Programming by permutation">Programming by permutation</a> (or "programming by accident", or "programming by coincidence"): Trying to approach a solution by successively modifying the code to see if it works</li>
+	<li><a href="/wiki/Reinventing_the_square_wheel" title="Reinventing the square wheel" class="mw-redirect">Reinventing the square wheel</a>: Failing to adopt an existing solution and instead adopting a custom solution which performs much worse than the existing one</li>
+	<li><a href="/wiki/No_Silver_Bullet" title="No Silver Bullet">Silver bullet</a>: Assuming that a favorite technical solution can solve a larger process or problem</li>
+	<li><a href="/wiki/Tester_Driven_Development" title="Tester Driven Development">Tester Driven Development</a>: Software projects in which new requirements are specified in bug reports</li>
+	</ul>
+</body>
