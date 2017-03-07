@@ -1,0 +1,22 @@
+/**
+ * Nested pseudo elements
+ * 
+ * According to [the spec](http://www.w3.org/TR/css3-content/#nesting) pseudo should be allowed to be nested.
+ */
+
+* {padding:1em;}
+
+div { 
+	content: 'A';
+	outline: 1px solid orange;
+}
+
+div::before { 
+	content: 'B'; 
+	outline: 1px solid red;
+}
+
+div::before::before { 
+	content: 'C'; 
+	outline: 1px solid lime;
+}
