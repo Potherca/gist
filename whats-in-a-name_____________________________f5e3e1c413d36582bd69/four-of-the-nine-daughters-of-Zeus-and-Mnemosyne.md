@@ -1,0 +1,5 @@
+The widely used Wikipedia states:
+
+> The Muses, the personification of knowledge and the arts, especially literature, dance and music, are the nine daughters of Zeus and Mnemosyne (memory personified). Hesiod's account and description of the Muses was the one generally followed by the writers of antiquity. It was not until Roman times that the following functions were assigned to them, and even then there was some variation in both their names and their attributes: Calliope (epic poetry), Clio (history), Euterpe (flutes and lyric poetry), Thalia (comedy and pastoral poetry), Melpomene (tragedy), Terpsichore (dance), Erato (love poetry), Polyhymnia (sacred poetry), Urania (astronomy).
+
+To be able to remember the muses that inspire me most, I came up with the [Name mnemonic](https://en.wikipedia.org/wiki/Mnemonic#Types) _Po-Th-Er-Ca_
