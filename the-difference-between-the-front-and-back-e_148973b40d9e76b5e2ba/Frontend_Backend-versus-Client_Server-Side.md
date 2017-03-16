@@ -5,34 +5,36 @@ It is not.
 
 It is perfectly acceptable to have Front-End logic happen on the Server:
 
-
-                           System Boundry
-                                 :
-                                 |
-                                 V
-    +-------------------------+     +--------------+
-    |        Front End        | --> |   Back End   |
-    +-------------------------+     +--------------+
-    
-    +----+     +--------------+     +--------------+
-    | UI | +-> |     Logic    | --> |  Application |
-    +----+     +--------------+     +--------------+
-    
-    +--------------+     +-------------------------+
-    |    Browser   | --> |          Server         |
-    +--------------+     +-------------------------+
-    
-                      ^
-                      |
-                      :
-                Server Boundry
+                  +------------------+ +--------------+
+                  |Delivery Mechanism| |System Boundry|
+                  +-----------------=+ +-------------=+
+                                     : :
+    *--------------------------------:-:-------------------*
+                                     : :
+                                     : :
+    +-----------------------------+  : :  +--------------+
+    |          Front End          | ----> |   Back End   |
+    +-----------------------------+  : :  +--------------+
+                      : :            : :
+                      : :            : :
+    +----+       +----+-+---------+  : :  +--------------+
+    | UI | ----> |     Logic      | ----> |  Application |
+    +----+       +----+-+---------+  : :  +--------------+
+                      : :            : :
+    +--------------+  : :  +-----------------------------+
+    |    Browser   | ----> |            Server           |
+    +--------------+  : :  +-----------------------------+
+                      : :
+                      : :
+    *-----------------:-:----------------------------------*
+                      : :          
+       +--------------+ +------+-------+
+       |Browser Boundy| |Server Boundry|
+       +-------------=+ +-------------=+
 
 The main reason why I have a gripe with this is that the front-end is just a delivery mechanism (excellently explained by Robert Martin at Ruby Midwest 2011
  http://www.youtube.com/watch?v=WpkDN78P884)
- 
- If this delivery mechanism is incorporated in the application and I want to use another means of connecting to the user (like the command line) this means I now have to _first_ separate the original code before implementing another connector.
- 
- -- EOF --
- 
- 
 
+ If this delivery mechanism is incorporated in the application and I want to use another means of connecting to the user (like the command line) this means I now have to _first_ separate the original code before implementing another connector.
+
+ -- EOF --
